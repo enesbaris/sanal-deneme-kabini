@@ -1,53 +1,49 @@
-// client/src/context/ThreeDContext.jsx
 import React, { createContext, useState, useContext } from 'react';
 
-export const ThreeDContext = createContext();
+// ✅ CONTEXT'I EXPORT ET! - BU EKSİKTİ
+export const ThreeDContext = createContext(); // ← EXPORT EKLENDİ
 
-// VARSAYILAN (DEFAULT) KIYAFETLER (Hatasız Versiyon)
-const DEFAULT_TOP = {
-  id: 1, // Mavi Basic Tişört
-  category: 'top',
-  meshName: 'mesh_0',
-};
-const DEFAULT_BOTTOM = {
-  id: 2, // Siyah Slim Kot
-  category: 'bottom',
-  meshName: 'CalculusTest01_0',
+// Custom Hook
+export const useThreeD = () => {
+  const context = useContext(ThreeDContext);
+  if (!context) {
+    throw new Error('useThreeD must be used within a ThreeDProvider');
+  }
+  return context;
 };
 
+// Provider Component
 export const ThreeDProvider = ({ children }) => {
-  // useState'i varsayılan kıyafetlerle başlat
-  const [wornItems, setWornItems] = useState({
-    top: DEFAULT_TOP,
-    bottom: DEFAULT_BOTTOM,
-    shoes: null,
-  });
+  const [wornItems, setWornItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
-  // Bir ürünü giydirmek veya çıkarmak için kullanılacak fonksiyon
+  // Ürünü giy/çıkar
   const toggleWornItem = (product) => {
-    if (!product || !product.category) {
-      console.error('Geçersiz ürün veya kategori:', product);
-      return;
-    }
-    
-    const category = product.category; // 'top', 'bottom', veya 'shoes'
-
-    setWornItems(prevItems => {
-      // 1. Durum: Zaten aynı ürün giyiliyorsa, onu çıkar
-      if (prevItems[category] && prevItems[category].id === product.id) {
-        return { ...prevItems, [category]: null };
-      }
-      // 2. Durum: Farklı bir ürün giyiliyorsa veya kategori boşsa, yeni ürünü giydir
-      else {
-        return { ...prevItems, [category]: product };
+    console.log('🎮 3D Deneme:', product.name);
+    setWornItems(prev => {
+      const exists = prev.find(item => item.id === product.id);
+      if (exists) {
+        console.log('➖ Ürün çıkarıldı:', product.name);
+        return prev.filter(item => item.id !== product.id);
+      } else {
+        console.log('➕ Ürün giyildi:', product.name);
+        return [...prev, { ...product, wornAt: new Date() }];
       }
     });
   };
 
-  // Bu değerleri tüm uygulamaya aç
+  // Tüm giyilenleri temizle
+  const clearWornItems = () => {
+    setWornItems([]);
+    console.log('🧹 Tüm giyilen ürünler temizlendi');
+  };
+
+  // Context value
   const value = {
-    wornItems,       // Hangi kıyafetlerin giyili olduğunu gösteren obje
-    toggleWornItem,  // Kıyafet değiştiren fonksiyon
+    wornItems,
+    toggleWornItem,
+    clearWornItems,
+    isLoading
   };
 
   return (

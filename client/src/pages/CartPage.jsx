@@ -87,30 +87,33 @@ export default function CartPage() {
                   </thead>
                   <tbody>
                     {cart.map((item) => (
-                      <tr key={item.product.id}>
+                      <tr key={item.cartItemId || item.id}>
                         <td>
                           <div className="d-flex align-items-center">
                             <img 
-                              src={item.product.imageUrl} 
-                              alt={item.product.name}
+                              src={item.imageUrl || `https://via.placeholder.com/60x60/6c757d/ffffff?text=${encodeURIComponent(item.name)}`}
+                              alt={item.name}
                               style={{ width: '60px', height: '60px', objectFit: 'cover' }}
                               className="rounded me-3"
+                              onError={(e) => {
+                                e.target.src = `https://via.placeholder.com/60x60/6c757d/ffffff?text=${encodeURIComponent(item.name)}`;
+                              }}
                             />
                             <div>
-                              <h6 className="mb-1">{item.product.name}</h6>
-                              <small className="text-muted">{item.product.description}</small>
+                              <h6 className="mb-1">{item.name}</h6>
+                              <small className="text-muted">{item.description}</small>
                             </div>
                           </div>
                         </td>
                         <td className="align-middle">
-                          <strong>{item.product.price} ₺</strong>
+                          <strong>{item.price} ₺</strong>
                         </td>
                         <td className="align-middle">
                           <div className="d-flex align-items-center">
                             <Button
                               variant="outline-secondary"
                               size="sm"
-                              onClick={() => handleQuantityChange(item.product.id, item.quantity - 1)}
+                              onClick={() => handleQuantityChange(item.id, item.quantity - 1)}
                               disabled={item.quantity <= 1}
                             >
                               -
@@ -118,7 +121,7 @@ export default function CartPage() {
                             <Form.Control
                               type="number"
                               value={item.quantity}
-                              onChange={(e) => handleQuantityChange(item.product.id, parseInt(e.target.value))}
+                              onChange={(e) => handleQuantityChange(item.id, parseInt(e.target.value))}
                               className="mx-2 text-center"
                               style={{ width: '60px' }}
                               min="1"
@@ -126,7 +129,7 @@ export default function CartPage() {
                             <Button
                               variant="outline-secondary"
                               size="sm"
-                              onClick={() => handleQuantityChange(item.product.id, item.quantity + 1)}
+                              onClick={() => handleQuantityChange(item.id, item.quantity + 1)}
                             >
                               +
                             </Button>
@@ -134,14 +137,14 @@ export default function CartPage() {
                         </td>
                         <td className="align-middle">
                           <strong className="text-primary">
-                            {(item.product.price * item.quantity).toFixed(2)} ₺
+                            {(item.price * item.quantity).toFixed(2)} ₺
                           </strong>
                         </td>
                         <td className="align-middle">
                           <Button
                             variant="outline-danger"
                             size="sm"
-                            onClick={() => handleRemoveItem(item.product.id)}
+                            onClick={() => handleRemoveItem(item.id)}
                           >
                             🗑️
                           </Button>

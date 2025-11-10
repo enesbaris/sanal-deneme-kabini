@@ -1,63 +1,99 @@
-// client/src/components/3d/Model.jsx
-import React, { useEffect } from 'react';
+// Model.jsx - POZİSYON ve SCALE DÜZELTMESİ:
+import React, { useEffect, useState } from 'react';
 import { useGLTF } from '@react-three/drei';
 import { useThreeD } from '../../hooks/useThreeD'; 
 
-// GİYİLEBİLİR TÜM KIYAFET mesh'lerinin listesi
-const ALL_CLOTHING_MESHES = [
-  'CalculusTest01_0', // Pantolon mesh adı
-  'mesh_0'            // Tişört/Ceket mesh adı
-];
-
 export function Model(props) { 
   const { nodes, materials } = useGLTF('/models/young_model.glb');
-  const { wornItems } = useThreeD(); // Context'ten o an giyilen kıyafetleri al
+  const { wornItems } = useThreeD();
+  const [modelReady, setModelReady] = useState(false);
 
-  // Ana sahne objesini bul
-  const modelScene = nodes.Sketchfab_Scene || nodes.Scene || nodes.scene || nodes.RootNode;
+  console.log('🎯 MODEL COMPONENT - Pozisyon ayarlanıyor');
 
-  // GİZLEME/GÖSTERME MANTIĞI
+  // ✅ BASİT ve GÜVENLİ MESH KONTROLÜ
   useEffect(() => {
-    if (!modelScene) return;
+    console.log('🔍 Model traversing başlıyor...');
+    
+    let sceneFound = false;
+    
+    const possibleScenes = [
+      nodes.Sketchfab_Scene, 
+      nodes.Scene, 
+      nodes.scene, 
+      nodes.RootNode,
+      nodes.default || nodes
+    ];
 
-    // 1. O an giyilen kıyafetlerin mesh adlarının listesi
-    // (İlk yüklemede ['mesh_0', 'CalculusTest01_0'] içerecek)
-    const wornMeshNames = Object.values(wornItems)
-      .filter(item => item !== null)
-      .map(item => item.meshName);
-
-    // 2. Modeldeki tüm parçaları dolaş
-    modelScene.traverse((child) => {
-      if (child.isMesh) {
+    for (const scene of possibleScenes) {
+      if (scene) {
+        console.log('✅ Sahne bulundu:', scene);
+        sceneFound = true;
         
-        // Bu parça giyilebilir bir kıyafet mi?
-        if (ALL_CLOTHING_MESHES.includes(child.name)) {
-          
-          // Bu kıyafet, "giyilenler" listesinde var mı?
-          if (wornMeshNames.includes(child.name)) {
-            child.visible = true; // Varsa GÖSTER
-          } else {
-            child.visible = false; // Yoksa GİZLE
+        // ✅ MODELİ MERKEZE GETİR ve DOĞRU SCALE YAP
+        scene.position.set(0, 0, 0);
+        scene.scale.set(1, 1, 1); // Önce reset
+        
+        scene.traverse((child) => {
+          if (child.isMesh) {
+            console.log('🔍 Mesh:', child.name);
+            child.visible = true; // Tümünü göster
           }
-          
-        } else {
-          // Bu bir kıyafet değil (Vücut, Saç, Gözler vb.)
-          child.visible = true; 
-        }
+        });
+        break;
       }
-    });
-
-  }, [wornItems, modelScene, nodes]); 
-
-  if (!modelScene) {
-    if (Object.keys(nodes).length > 0) {
-      console.error("Model.jsx: Ana sahne objesi ('Sketchfab_Scene' gibi) bulunamadı.");
     }
-    return null;
+
+    if (!sceneFound) {
+      console.log('❌ Hiçbir sahne bulunamadı');
+    }
+
+    setModelReady(true);
+  }, [nodes]);
+
+  // ✅ FALLBACK - GÖRÜNÜR BASİT MODEL
+  if (!modelReady) {
+    console.log('⏳ Model hazırlanıyor, fallback gösteriliyor');
+    return (
+      <group>
+        {/* ✅ MERKEZDE ve GÖRÜNÜR BASİT MODEL */}
+        <mesh position={[0, 0, 0]}>
+          <sphereGeometry args={[1, 16, 16]} />
+          <meshStandardMaterial color="red" />
+        </mesh>
+        <mesh position={[0, 1.5, 0]}>
+          <boxGeometry args={[0.8, 0.8, 0.8]} />
+          <meshStandardMaterial color="blue" />
+        </mesh>
+        <mesh position={[0, -1.2, 0]}>
+          <cylinderGeometry args={[0.6, 0.8, 1, 8]} />
+          <meshStandardMaterial color="green" />
+        </mesh>
+      </group>
+    );
   }
 
-  // Modeli ekrana bas
-  return <primitive object={modelScene} {...props} />;
+  const modelScene = nodes.Sketchfab_Scene || nodes.Scene || nodes.scene || nodes.RootNode || nodes.default || nodes;
+
+  if (!modelScene) {
+    return (
+      <group>
+        <mesh position={[0, 0, 0]}>
+          <boxGeometry args={[1, 1, 1]} />
+          <meshStandardMaterial color="purple" />
+        </mesh>
+      </group>
+    );
+  }
+
+  console.log('✅ Model render ediliyor - MERKEZDE');
+  return (
+    <primitive 
+      object={modelScene} 
+      position={[0, 0, 0]}  // ✅ MERKEZ
+      scale={[1, 1, 1]}     // ✅ NORMAL BOYUT
+      {...props}
+    />
+  );
 }
 
 useGLTF.preload('/models/young_model.glb');

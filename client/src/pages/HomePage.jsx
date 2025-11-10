@@ -1,5 +1,5 @@
-// client/src/pages/HomePage.jsx
-import React, { useState } from 'react';
+// HomePage.jsx - GÜNCELLE:
+import React, { useState, useEffect } from 'react';
 import AvatarCanvas from '../components/3d/AvatarCanvas';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -7,11 +7,37 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { useAuth } from '../hooks/useAuth';
+import { useThreeD } from '../hooks/useThreeD'; // ✅ THREE DCONTEXT EKLE
 
 export default function HomePage() {
-  
   const [activeMeshName, setActiveMeshName] = useState('CalculusTest01_0'); 
-  const { isAuthenticated, user } = useAuth(); 
+  const { isAuthenticated, user } = useAuth();
+  const { wornItems, toggleWornItem, clearWornItems } = useThreeD(); // ✅ THREE D HOOK
+
+  // ✅ THREE DCONTEXT'TEKİ DEĞİŞİKLİKLERİ DİNLE
+  useEffect(() => {
+    console.log('🎮 Giyilen ürünler güncellendi:', wornItems);
+    
+    if (wornItems.length > 0) {
+      // Son giyilen ürünü aktif yap
+      const lastWornItem = wornItems[wornItems.length - 1];
+      console.log('👕 Son giyilen ürün:', lastWornItem.name);
+      
+      // Ürün kategorisine göre mesh seç
+      if (lastWornItem.category === 'top') {
+        setActiveMeshName('CalculusTest01_0'); // Üst giyim
+      } else if (lastWornItem.category === 'bottom') {
+        setActiveMeshName('mesh_0'); // Alt giyim
+      }
+    }
+  }, [wornItems]);
+
+  // ✅ TÜM KIYAFETLERİ ÇIKAR
+  const handleUndressAll = () => {
+    setActiveMeshName('none');
+    clearWornItems();
+    console.log('🚫 Tüm kıyafetler çıkarıldı');
+  };
 
   return (
     <Container fluid="lg" className="pt-4">
@@ -46,7 +72,7 @@ export default function HomePage() {
 
                 <Button 
                   variant="outline-danger"
-                  onClick={() => setActiveMeshName('none')}
+                  onClick={handleUndressAll}
                   size="lg"
                 >
                   🚫 Kıyafetleri Çıkar
@@ -63,6 +89,27 @@ export default function HomePage() {
                   }
                 </small>
               </div>
+
+              {/* ✅ GİYİLEN ÜRÜNLER LİSTESİ */}
+              {wornItems.length > 0 && (
+                <div className="mt-3">
+                  <h6>👗 Giyilen Ürünler:</h6>
+                  <div className="small">
+                    {wornItems.map(item => (
+                      <div key={item.id} className="d-flex justify-content-between align-items-center mb-1">
+                        <span>{item.name}</span>
+                        <Button 
+                          variant="outline-danger" 
+                          size="sm"
+                          onClick={() => toggleWornItem(item)}
+                        >
+                          Çıkar
+                        </Button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </Card.Body>
           </Card>
 

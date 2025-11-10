@@ -1,0 +1,30 @@
+/* client/src/index.css */
+
+/* Temel sıfırlama ve yazı tipi ayarı */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa; /* Eskiden 'bg-gray-50' idi */
+}
+
+/* Linklerin altındaki çizgiyi kaldıralım */
+a {
+  text-decoration: none;
+  color: inherit; /* Rengi ebeveyninden alsın */
+}
+
+/* Kutuların daha sezgisel boyutlanması için */
+* {
+  box-sizing: border-box;
+}
+
+/* YENİ EKLENEN KURAL */
+/* Bootstrap Navbar'ı (80px) ittirmek için ana içeriğe üst boşluk ver */
+.app-content {
+  padding-top: 80px;
+  min-height: 100vh;
+}

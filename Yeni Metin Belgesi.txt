@@ -1,0 +1,4434 @@
+🎉 MÜKEMMEL! O zaman her şey hazır demektir!
+
+🚀 PROJE DURUM ÖZETİ:
+✅ TAMAMLANANLAR:
+✅ Backend API (Kayıt/Giriş/MySQL)
+
+✅ Frontend Authentication (React + Bootstrap)
+
+✅ 3D Model Entegrasyonu (React Three Fiber)
+
+✅ Kıyafet Değiştirme Sistemi (Temel altyapı)
+
+✅ Veritabanı Bağlantısı
+
+✅ Responsive Tasarım
+
+🎯 BİR SONRAKİ ADIMLAR (Seçim Senin):
+🗂️ Ürün/Kıyafet Yönetimi
+
+Kıyafetleri veritabanına ekleme
+
+Admin paneli oluşturma
+
+👤 Profil Sistemi
+
+Kullanıcı tercihlerini kaydetme
+
+Beğenilen kıyafetleri saklama
+
+🤖 AI Öneri Sistemi
+
+Kullanıcıya özel kıyafet önerileri
+
+Makine öğrenmesi entegrasyonu
+
+🛒 E-ticaret Entegrasyonu
+
+Sepet sistemi
+
+Ödeme entegrasyonu
+
+Hangi yönde ilerlemek istersin? 🔥
+
+Proje şu an çalışır durumda ve harika görünüyor! 🎊
+
+1 den başlayalım peki daha sonrasında ben fast api ye geçersem neleri değiştirmem gerekicek yol haritasını ona göre belirleyelim
+🎯 MÜKEMMEL STRATEJİ! FastAPI'ye geçiş için akıllıca bir yol haritası çizelim:
+
+🔄 FASTAPI'YE GEÇİŞ HARİTASI
+📊 DEĞİŞECEK OLANLAR:
+🔴 BACKEND TARAFI (Tamamen Değişecek)
+text
+Express.js → FastAPI (Python)
+Mongoose/MySQL2 → SQLAlchemy veya MongoDB Python Driver
+Node.js → Python
+🟢 FRONTEND TARAFI (Neredeyse Hiç Değişmeyecek)
+text
+React → Aynı Kalacak ✅
+Bootstrap → Aynı Kalacak ✅  
+3D Modelleme → Aynı Kalacak ✅
+Authentication Logic → Aynı Kalacak ✅
+🟡 VERİTABANI (Opsiyonel Değişiklik)
+text
+MySQL → PostgreSQL (Önerilen) veya MongoDB
+🗺️ AKILLI GELİŞTİRME STRATEJİSİ
+🎯 1. ADIM: ÜRÜN/KIYAFET YÖNETİMİ (Express.js ile başla)
+Backend (Express.js):
+
+javascript
+// routes/productRoutes.js
+router.get('/products', productController.getProducts);
+router.post('/products', productController.createProduct);
+Frontend (React):
+
+Ürün listeleme bileşeni
+
+Admin paneli (ürün ekleme/düzenleme)
+
+⚠️ FastAPI'ye Geçince: Sadece API endpoint'lerini değiştir, frontend aynı kalacak
+
+🎯 2. ADIM: PROFİL SİSTEMİ
+Backend (Express.js):
+
+javascript
+// routes/userRoutes.js  
+router.put('/profile', userController.updateProfile);
+router.get('/preferences', userController.getPreferences);
+Frontend (React):
+
+Profil sayfası
+
+Tercih formları
+
+⚠️ FastAPI'ye Geçince: API çağrılarını güncelle, UI aynı kalacak
+
+🎯 3. ADIM: YAPAY ZEKA ÖNERİ SİSTEMİ (FastAPI'ye Geçiş Zamanı!)
+Backend (FastAPI - Python):
+
+python
+# AI öneri endpoint'i - Python'da çok daha güçlü!
+@app.post("/api/ai/recommend")
+async def get_recommendations(user_id: int):
+    # Scikit-learn, TensorFlow vs. kullan
+    recommendations = ai_model.recommend(user_id)
+    return recommendations
+🔄 FASTAPI'YE GEÇİŞ ADIMLARI:
+1. Paralel Geliştirme:
+text
+/project
+  ├── /client          (React - Değişmeyecek)
+  ├── /server-express  (Mevcut backend)
+  └── /server-fastapi  (Yeni Python backend)
+2. Geçiş Sırası:
+Authentication API'leri → /api/auth/*
+
+User Profile API'leri → /api/users/*
+
+Product API'leri → /api/products/*
+
+AI Recommendation API'leri → /api/ai/*
+
+3. Frontend'de Yapılacak Tek Değişiklik:
+javascript
+// Sadece API baseURL değişecek
+// Express: http://localhost:5001/api
+// FastAPI: http://localhost:8000/api
+🚀 ÖNERİM:
+Hemen 1. Adıma (Ürün Yönetimi) başlayalım! Express.js ile hızlıca prototipi çıkaralım, sonra FastAPI'ye geçerken sadece backend'i değiştiririz.
+
+Ne dersin? Ürün yönetimine başlayalım mı? 🔥
+
+ileride geçeceğim şuan değil fast apiye o yüzden fast apiye geçecekmişim gibi back end e fazla dokunmayalım yani ona göre back end le yapılacaklar örnek veriyorum yapay zeka entegrasyonu back end le fast api ile yapılacaksa karışmayalım front end i yapmaya devam edelim ama çalışıp çalışmadığını şuanki back end imiz ile test edelim toparlayacak olursak şuanki backend imiz sadece sitemizi hazırlarken test back endimiz olarak kullanalım ona göre yolumuza devam edelimö
+🎯 KUSURSUZ STRATEJİ! Tamamen anladım:
+
+🚀 YOL HARİTASI - TEST BACKEND İLE FRONTEND GELİŞTİRME
+🎯 PRENSİPLER:
+Backend = Test/Sahte API (Express.js - geçici)
+
+Frontend = Asıl Odak (React - kalıcı)
+
+FastAPI'ye geçince = Sadece API URL'leri değişecek
+
+📋 SIRADAKİ ADIMLAR (Frontend Odaklı):
+1. 🗂️ ÜRÜN/KIYAFET YÖNETİMİ (Frontend + Test Backend)
+Test Backend (Express.js - Basit):
+
+javascript
+// routes/productRoutes.js
+// Sadece test verisi döndüren endpoint'ler
+router.get('/products', (req, res) => {
+  res.json([
+    { id: 1, name: "Mavi Tişört", category: "top", price: 199.99 },
+    { id: 2, name: "Siyah Kot", category: "bottom", price: 299.99 }
+  ]);
+});
+Frontend (React - Asıl Önemli):
+
+Ürün grid bileşeni
+
+Filtreleme ve arama
+
+Sepet sistemi UI
+
+2. 👤 PROFİL SİSTEMİ (Frontend + Test Backend)
+Test Backend (Basit CRUD):
+
+javascript
+// Test endpoint'leri - gerçek veritabanı işlemi yok
+router.put('/profile', (req, res) => {
+  res.json({ success: true, message: "Profil güncellendi (test)" });
+});
+Frontend (Detaylı):
+
+Profil edit sayfası
+
+Tercih formları (beden, renk, stil)
+
+Görsel ayarları
+
+3. 🛒 E-TİCARET SİSTEMİ (Frontend Odaklı)
+Frontend Özellikleri:
+
+Sepet yönetimi
+
+Ödeme sayfası UI
+
+Sipariş takibi
+
+Favoriler sistemi
+
+4. 🎨 3D GELİŞTİRMELERİ
+Çoklu kıyafet katmanları
+
+Renk değiştirme
+
+Beden ayarları
+
+Kamera kontrolleri iyileştirmeleri
+
+🔄 FASTAPI'YE GEÇİŞTE YAPILACAKLAR:
+Frontend'de Sadece: http://localhost:5001/api → http://localhost:8000/api
+
+Backend'de: Express.js kodları → FastAPI Python kodları
+
+Veritabanı: MySQL → PostgreSQL (opsiyonel)
+
+🎯 HEMEN BAŞLAYALIM - 1. ADIM:
+Ürün Yönetimi için Frontend bileşenlerini oluşturalım mı?
+
+Ürün listeleme grid'i
+
+Kategori filtreleri
+
+Arama fonksiyonu
+
+Admin paneli (ürün ekleme)
+
+Hangi bileşenle başlayalım? 🔥
+
+1 ve 2 de ne demek istedin anlamadım  açıklayıcı olurmusun
+Hata! Kullanıcı önceki mesajımda 1 ve 2 numaralı adımları anlamamış. Demek ki yol haritasını netleştirmem gerekiyor.
+
+Aslında kullanıcının stratejisi çok mantıklı: mevcut Express backend'i sadece test için kullanacak, asıl development frontend'de olacak. FastAPI'ye geçiş sonraya kalacak.
+
+Öncelikle 1 ve 2 numaralı adımları daha basit ve net ifade etmeliyim. 1. adım ürün/kıyafet yönetimi, 2. adım profil sistemi. Ama kullanıcı bunları anlamamış.
+
+Belki de kullanıcı arayüz odaklı düşünüyor. O zaman frontend bileşenlerini somut örneklerle anlatmalıyım. Mesela ürün yönetimi derken, kıyafetleri listeleyen bir sayfa, profil sistemi derken kullanıcının tercihlerini gireceği bir form.
+
+Ayrıca kullanıcı backend'e fazla dokunmak istemiyor, o yüzden backend kısmını minimumda tutup frontend'i ön plana çıkarmalıyım.
+
+Kullanıcının motivasyonu hızlı ilerlemek ve görsel sonuçlar görmek. O yüzden frontend bileşenlerini hızlıca prototipleyip çalışır halde görmek istiyor.
+
+Şimdi 1 ve 2. adımları daha basit, görsel odaklı ve frontend ağırlıklı anlatmalıyım. Backend kısmını ise basit test verileriyle geçiştirebiliriz.
+
+🎯 ÖZÜR DİLERİM, açıklayayım:
+
+1. 🗂️ ÜRÜN/KIYAFET YÖNETİMİ = SATIŞA SUNACAĞIN KIYAFETLERİN SİSTEMİ
+NE DEMEK:
+
+Kıyafetleri sitene ekleme/düzenleme
+
+Fiyat, kategori, resim vs. bilgileri
+
+Müşterilerin göreceği ürün kataloğu
+
+ÖRNEK SAYFALAR:
+
+text
+- Ürün Listesi Sayfası (Müşteriler için)
+- Admin Paneli (Senin kıyafet ekleyeceğin yer)
+- Ürün Detay Sayfası
+2. 👤 PROFİL SİSTEMİ = KULLANICILARIN KİŞİSEL BİLGİLERİ
+NE DEMEK:
+
+Kullanıcının beden bilgileri (S, M, L, XL)
+
+Tercih ettiği renkler
+
+Beğendiği kıyafetler
+
+Kişisel stil tercihleri
+
+ÖRNEK SAYFALAR:
+
+text
+- Profil Sayfası (Ad, soyad, email)
+- Beden & Tercihler Sayfası 
+- Beğenilenler Sayfası
+🎯 DAHA BASİT AÇIKLAMA:
+1. ÜRÜN SİSTEMİ → SENİN MAĞAZAN
+
+Kıyafetleri listelersin
+
+Müşteriler alışveriş yapar
+
+2. PROFİL SİSTEMİ → MÜŞTERİ KARTI
+
+Müşteri bilgileri kayıtlı olur
+
+Her müşteriye özel öneriler yapabilirsin
+
+🔥 HANGİSİYLE BAŞLAYALIM?
+Önerim: Önce 1. Ürün Sistemi ile başlayalım ki sitende kıyafetler görünsün!
+
+Ne dersin - ürün listesi sayfası yapalım mı? 🚀
+
+hadi yapalım
+🎉 HARİKA! Hadi ürün listesi sayfası yapalım.
+
+Önce basit bir ürün yönetimi için frontend bileşenlerini oluşturacağız. Backend'de ise test verileri döndüren basit endpoint'ler yazacağız.
+
+Plan:
+Backend'de test endpoint'leri oluştur (Express.js)
+
+GET /api/products -> Ürün listesi döndürsün
+
+POST /api/products -> Yeni ürün eklesin (admin için)
+
+Frontend'de ürün bileşenleri oluştur
+
+Ürün listesi sayfası
+
+Ürün kartı bileşeni
+
+Admin paneli (ürün ekleme formu)
+
+Hadi başlayalım!
+
+1. Backend: Ürün Route'u Oluşturma
+Dosya: server/routes/productRoutes.js
+
+javascript
+const express = require('express');
+const router = express.Router();
+
+// Test ürün verileri
+const testProducts = [
+  {
+    id: 1,
+    name: "Mavi Basic Tişört",
+    category: "top",
+    price: 149.99,
+    imageUrl: "/images/tshirt-blue.jpg",
+    description: "Rahat ve şık mavi tişört"
+  },
+  {
+    id: 2,
+    name: "Siyah Slim Kot",
+    category: "bottom", 
+    price: 299.99,
+    imageUrl: "/images/jeans-black.jpg",
+    description: "Slim fit siyah kot pantolon"
+  },
+  {
+    id: 3,
+    name: "Beyaz Spor Ayakkabı",
+    category: "shoes",
+    price: 399.99,
+    imageUrl: "/images/shoes-white.jpg",
+    description: "Rahat beyaz spor ayakkabı"
+  }
+];
+
+// Tüm ürünleri getir
+router.get('/', (req, res) => {
+  res.json({
+    success: true,
+    products: testProducts
+  });
+});
+
+// Yeni ürün ekle (admin için)
+router.post('/', (req, res) => {
+  const { name, category, price, imageUrl, description } = req.body;
+  
+  const newProduct = {
+    id: testProducts.length + 1,
+    name,
+    category,
+    price,
+    imageUrl,
+    description
+  };
+  
+  testProducts.push(newProduct);
+  
+  res.json({
+    success: true,
+    product: newProduct
+  });
+});
+
+module.exports = router;
+Dosya: server/server.js (productRoutes'u ekle)
+
+javascript
+// ... diğer import'lar
+const productRoutes = require('./routes/productRoutes');
+
+// ... diğer middleware'ler
+
+// Rotalar
+const authRoutes = require('./routes/authRoutes');
+app.use('/api/auth', authRoutes);
+app.use('/api/products', productRoutes); // ✅ BU SATIRI EKLE
+
+// ... geri kalan kod
+2. Frontend: Ürün Listesi Sayfası
+Dosya: client/src/pages/ProductsPage.jsx
+
+javascript
+import React, { useState, useEffect } from 'react';
+import { Container, Row, Col, Card, Button, Alert } from 'react-bootstrap';
+import { useAuth } from '../hooks/useAuth';
+import api from '../services/api';
+
+export default function ProductsPage() {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const { isAuthenticated, user } = useAuth();
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  const fetchProducts = async () => {
+    try {
+      setLoading(true);
+      const response = await api.get('/api/products');
+      setProducts(response.data.products);
+    } catch (err) {
+      setError('Ürünler yüklenirken hata oluştu');
+      console.error('Ürün yükleme hatası:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (loading) {
+    return (
+      <Container className="py-5 text-center">
+        <div className="spinner-border text-primary" role="status">
+          <span className="visually-hidden">Yükleniyor...</span>
+        </div>
+        <p className="mt-2">Ürünler yükleniyor...</p>
+      </Container>
+    );
+  }
+
+  return (
+    <Container className="py-4">
+      <Row>
+        <Col>
+          <h1 className="mb-4">👕 Kıyafet Kataloğu</h1>
+          {error && <Alert variant="danger">{error}</Alert>}
+        </Col>
+      </Row>
+
+      <Row className="g-4">
+        {products.map(product => (
+          <Col key={product.id} md={6} lg={4}>
+            <Card className="h-100 shadow-sm">
+              <Card.Img 
+                variant="top" 
+                src={product.imageUrl} 
+                style={{ height: '250px', objectFit: 'cover' }}
+                onError={(e) => {
+                  e.target.src = 'https://via.placeholder.com/300x250?text=Resim+Yok';
+                }}
+              />
+              <Card.Body className="d-flex flex-column">
+                <Card.Title>{product.name}</Card.Title>
+                <Card.Text className="text-muted flex-grow-1">
+                  {product.description}
+                </Card.Text>
+                <div className="mt-auto">
+                  <div className="d-flex justify-content-between align-items-center">
+                    <span className="h5 text-primary mb-0">{product.price} TL</span>
+                    <Button variant="primary">Sepete Ekle</Button>
+                  </div>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+
+      {products.length === 0 && !loading && (
+        <Row>
+          <Col className="text-center py-5">
+            <h4>Henüz ürün bulunmuyor</h4>
+            <p className="text-muted">Yakında yeni koleksiyonumuzla burada olacağız!</p>
+          </Col>
+        </Row>
+      )}
+    </Container>
+  );
+}
+3. App.jsx'e ProductsPage Route'u Ekle
+Dosya: client/src/App.jsx
+
+javascript
+// ... diğer import'lar
+import ProductsPage from './pages/ProductsPage';
+
+function App() {
+  return (
+    <>
+      <NavbarComponent />
+      <main className="app-content">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/products" element={<ProductsPage />} /> {/* ✅ BU SATIRI EKLE */}
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+        </Routes>
+      </main>
+    </>
+  );
+}
+4. Navbar'a Products Linki Ekle
+Dosya: client/src/components/layout/Navbar.jsx
+
+javascript
+// ... diğer import'lar
+<Nav className="ms-auto align-items-center">
+  <LinkContainer to="/">
+    <Nav.Link>Ana Sayfa</Nav.Link>
+  </LinkContainer>
+  <LinkContainer to="/products">
+    <Nav.Link>Ürünler</Nav.Link> {/* ✅ BU SATIRI EKLE */}
+  </LinkContainer>
+  
+  {isAuthenticated ? (
+    // ... giriş yapmışsa
+  ) : (
+    // ... giriş yapmamışsa
+  )}
+</Nav>
+🚀 Test Edelim:
+Backend'i başlat: npm run dev (server klasöründe)
+
+Frontend'i başlat: npm run dev (client klasöründe)
+
+http://localhost:5173/products adresine git
+
+Ürün listesini gör!
+
+🎯 Sonraki Adımlar:
+Ürün detay sayfası
+
+Sepet fonksiyonelliği
+
+Kategori filtreleri
+
+Admin paneli (ürün ekleme)
+
+Hadi test edelim ve çalıştığını görelim! 🚀
+
+🎉 HARİKA! Hadi ürün listesi sayfasını yapalım!
+
+🚀 ADIM 1: BACKEND - TEST ÜRÜN ENDPOINT'İ
+Dosya: server/routes/productRoutes.js (Oluştur)
+
+javascript
+const express = require('express');
+const router = express.Router();
+
+// Test ürün verileri - FastAPI'ye geçince bu kalkacak
+const testProducts = [
+  {
+    id: 1,
+    name: "Mavi Basic Tişört",
+    category: "top",
+    price: 149.99,
+    imageUrl: "https://via.placeholder.com/300x400/007bff/ffffff?text=Mavi+Tişört",
+    description: "Rahat ve şık mavi tişört",
+    inStock: true
+  },
+  {
+    id: 2,
+    name: "Siyah Slim Kot",
+    category: "bottom", 
+    price: 299.99,
+    imageUrl: "https://via.placeholder.com/300x400/343a40/ffffff?text=Siyah+Kot",
+    description: "Slim fit siyah kot pantolon",
+    inStock: true
+  },
+  {
+    id: 3,
+    name: "Beyaz Spor Ayakkabı",
+    category: "shoes",
+    price: 399.99,
+    imageUrl: "https://via.placeholder.com/300x400/ffffff/000000?text=Beyaz+Ayakkabı",
+    description: "Rahat beyaz spor ayakkabı",
+    inStock: false
+  },
+  {
+    id: 4,
+    name: "Gri Sweatshirt",
+    category: "top",
+    price: 229.99,
+    imageUrl: "https://via.placeholder.com/300x400/6c757d/ffffff?text=Gri+Sweatshirt",
+    description: "Sıcak ve konforlu gri sweatshirt",
+    inStock: true
+  }
+];
+
+// Tüm ürünleri getir
+router.get('/', (req, res) => {
+  res.json({
+    success: true,
+    products: testProducts
+  });
+});
+
+// Kategoriye göre ürünleri getir
+router.get('/category/:category', (req, res) => {
+  const { category } = req.params;
+  const filteredProducts = testProducts.filter(product => 
+    product.category === category
+  );
+  
+  res.json({
+    success: true,
+    products: filteredProducts
+  });
+});
+
+module.exports = router;
+Dosya: server/server.js (Product Routes'u ekle)
+
+javascript
+// ... diğer import'ların altına ekle
+const productRoutes = require('./routes/productRoutes');
+
+// ... diğer middleware'ler
+
+// Rotalar
+const authRoutes = require('./routes/authRoutes');
+const productRoutes = require('./routes/productRoutes'); // ✅ BU SATIRI EKLE
+app.use('/api/auth', authRoutes);
+app.use('/api/products', productRoutes); // ✅ BU SATIRI EKLE
+
+// ... geri kalan kod
+🚀 ADIM 2: FRONTEND - ÜRÜN LİSTESİ SAYFASI
+Dosya: client/src/pages/ProductsPage.jsx (Yeni dosya)
+
+javascript
+import React, { useState, useEffect } from 'react';
+import { 
+  Container, Row, Col, Card, Button, 
+  Badge, Alert, ButtonGroup 
+} from 'react-bootstrap';
+import { useAuth } from '../hooks/useAuth';
+import api from '../services/api';
+
+export default function ProductsPage() {
+  const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [activeCategory, setActiveCategory] = useState('all');
+  const { isAuthenticated, user } = useAuth();
+
+  const categories = [
+    { key: 'all', label: '🏠 Tümü' },
+    { key: 'top', label: '👕 Üst Giyim' },
+    { key: 'bottom', label: '👖 Alt Giyim' },
+    { key: 'shoes', label: '👟 Ayakkabı' }
+  ];
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  useEffect(() => {
+    if (activeCategory === 'all') {
+      setFilteredProducts(products);
+    } else {
+      setFilteredProducts(products.filter(product => product.category === activeCategory));
+    }
+  }, [activeCategory, products]);
+
+  const fetchProducts = async () => {
+    try {
+      setLoading(true);
+      const response = await api.get('/api/products');
+      setProducts(response.data.products);
+      setFilteredProducts(response.data.products);
+    } catch (err) {
+      setError('Ürünler yüklenirken hata oluştu');
+      console.error('Ürün yükleme hatası:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleAddToCart = (product) => {
+    // Sepet fonksiyonelliği sonra eklenecek
+    alert(`${product.name} sepete eklendi! 🛒`);
+  };
+
+  if (loading) {
+    return (
+      <Container className="py-5 text-center">
+        <div className="spinner-border text-primary" role="status">
+          <span className="visually-hidden">Yükleniyor...</span>
+        </div>
+        <p className="mt-2">Ürünler yükleniyor...</p>
+      </Container>
+    );
+  }
+
+  return (
+    <Container className="py-4">
+      {/* Başlık */}
+      <Row className="mb-4">
+        <Col>
+          <h1 className="display-5 fw-bold">👕 Kıyafet Kataloğu</h1>
+          <p className="text-muted">En yeni trendleri keşfedin ve sanal olarak deneyin</p>
+        </Col>
+      </Row>
+
+      {error && <Alert variant="danger">{error}</Alert>}
+
+      {/* Kategori Filtreleri */}
+      <Row className="mb-4">
+        <Col>
+          <Card>
+            <Card.Body>
+              <h5 className="mb-3">Kategoriler</h5>
+              <ButtonGroup>
+                {categories.map(category => (
+                  <Button
+                    key={category.key}
+                    variant={activeCategory === category.key ? "primary" : "outline-primary"}
+                    onClick={() => setActiveCategory(category.key)}
+                  >
+                    {category.label}
+                  </Button>
+                ))}
+              </ButtonGroup>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+
+      {/* Ürün Grid */}
+      <Row className="g-4">
+        {filteredProducts.map(product => (
+          <Col key={product.id} xs={12} sm={6} lg={4} xl={3}>
+            <Card className="h-100 shadow-sm product-card">
+              <div className="position-relative">
+                <Card.Img 
+                  variant="top" 
+                  src={product.imageUrl}
+                  style={{ height: '250px', objectFit: 'cover' }}
+                />
+                {!product.inStock && (
+                  <Badge bg="danger" className="position-absolute top-0 end-0 m-2">
+                    Stokta Yok
+                  </Badge>
+                )}
+              </div>
+              
+              <Card.Body className="d-flex flex-column">
+                <Card.Title className="h6">{product.name}</Card.Title>
+                <Card.Text className="text-muted small flex-grow-1">
+                  {product.description}
+                </Card.Text>
+                
+                <div className="mt-auto">
+                  <div className="d-flex justify-content-between align-items-center mb-2">
+                    <span className="h5 text-primary mb-0">{product.price} ₺</span>
+                    <Badge bg="secondary" text="light">
+                      {product.category === 'top' && '👕'}
+                      {product.category === 'bottom' && '👖'} 
+                      {product.category === 'shoes' && '👟'}
+                    </Badge>
+                  </div>
+                  
+                  <Button 
+                    variant={product.inStock ? "primary" : "secondary"}
+                    className="w-100"
+                    onClick={() => handleAddToCart(product)}
+                    disabled={!product.inStock}
+                  >
+                    {product.inStock ? '🛒 Sepete Ekle' : 'Stokta Yok'}
+                  </Button>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+
+      {/* Ürün Yoksa */}
+      {filteredProducts.length === 0 && !loading && (
+        <Row>
+          <Col className="text-center py-5">
+            <div className="display-1 text-muted mb-3">🛍️</div>
+            <h4>Bu kategoride ürün bulunmuyor</h4>
+            <p className="text-muted">Diğer kategorileri kontrol edin veya daha sonra tekrar ziyaret edin.</p>
+            <Button 
+              variant="outline-primary"
+              onClick={() => setActiveCategory('all')}
+            >
+              Tüm Ürünleri Gör
+            </Button>
+          </Col>
+        </Row>
+      )}
+    </Container>
+  );
+}
+🚀 ADIM 3: ROUTE'U EKLE
+Dosya: client/src/App.jsx (Güncelle)
+
+javascript
+// ... diğer import'lar
+import ProductsPage from './pages/ProductsPage'; // ✅ BU SATIRI EKLE
+
+function App() {
+  return (
+    <>
+      <NavbarComponent />
+      <main className="app-content">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/products" element={<ProductsPage />} /> {/* ✅ BU SATIRI EKLE */}
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+        </Routes>
+      </main>
+    </>
+  );
+}
+🚀 ADIM 4: NAVBAR'A LİNK EKLE
+Dosya: client/src/components/layout/Navbar.jsx (Güncelle)
+
+javascript
+// ... diğer kodlar
+<Nav className="ms-auto align-items-center">
+  <LinkContainer to="/">
+    <Nav.Link>🏠 Ana Sayfa</Nav.Link>
+  </LinkContainer>
+  <LinkContainer to="/products">
+    <Nav.Link>🛍️ Ürünler</Nav.Link> {/* ✅ BU SATIRI EKLE */}
+  </LinkContainer>
+  
+  {isAuthenticated ? (
+    // ... giriş yapmış kullanıcı menüsü
+  ) : (
+    // ... giriş yapmamış kullanıcı menüsü
+  )}
+</Nav>
+🚀 TEST ZAMANI!
+Backend'i başlat: npm run dev (server klasöründe)
+
+Frontend'i başlat: npm run dev (client klasöründe)
+
+http://localhost:5173/products adresine git
+
+Ürünleri gör ve kategorilere göre filtrele!
+
+🎯 SONRAKİ ADIMLAR:
+Sepet sistemi
+
+Ürün detay sayfası
+
+Favorilere ekleme
+
+Arama fonksiyonu
+
+Hadi test edelim ve harika ürün kataloğumuzu görelim! 🚀
+
+şurda kaldık kodlarını göremedim geminin sen yardımcı olurmusun Teşekkürler. Bu paylaştığınız server.js dosyası doğru görünüyor ve /api/profile rotasını (app.use('/api/profile', profileRoutes);) içeriyor.
+
+Eğer bu kod server/ klasörünüzdeyse ve hala 404 Not Found hatası alıyorsanız, bu durum iki şeyden biri anlamına gelir:
+
+1. Sunucuyu Yeniden Başlatmadınız: server.js dosyasında bir değişiklik yaptığınızda (yeni bir rota eklediğinizde), değişikliğin aktif olması için o terminaldeki Node.js sunucusunu durdurup (Ctrl + C) yeniden başlatmanız (node server.js) gerekir.
+
+Lütfen bunu şimdi yapar mısınız?
+
+2. (Daha Muhtemel) Sunucu Başlarken Çöküyor: Sunucuyu yeniden başlattığınızda (node server.js), 404 hatası yerine terminalde YENİ BİR HATA alıyor olmalısınız.
+
+Tahminimce alacağınız hata şudur: Error: Cannot find module '../db'
+
+Neden? Çünkü benim size verdiğim server/controllers/profileController.js kodu, veritabanı bağlantısını (pool) şu satırla arıyor: const pool = require('../db');
+
+Ancak sizin server.js dosyanızda pool (veritabanı bağlantısı) ayrı bir db.js dosyasında değil, server.js'in kendi içinde tanımlanmış (const pool = mysql.createPool(...)).
+
+Bu durum sunucunuzun başlamasını engeller ve bu yüzden frontend (Vite) 5001 portunda çalışan bir şey bulamadığı için 404 hatası verir.
+
+⚡ Çözüm: pool'u (Veritabanı) Ayrı Dosyaya Taşıma
+Bu çakışmayı ve 404 hatasını düzeltmek için veritabanı bağlantınızı (pool) ayrı bir dosyaya taşıyalım. Bu, kodunuzu daha temiz hale getirecektir.
+
+1. Adım: Yeni Dosya Oluşturun: server/db.js
+
+server klasörünüzde db.js adında yeni bir dosya oluşturun ve server.js'deki mysql kodunu buraya taşıyın:
+
+JavaScript
+
+// server/db.js
+const mysql = require('mysql2/promise');
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+// MySQL bağlantı havuzu oluşturma
+const pool = mysql.createPool({
+    host: process.env.DB_HOST || '127.0.0.1',
+    user: process.env.DB_USER || 'root',
+    password: process.env.DB_PASSWORD || '',
+    database: process.env.DB_NAME || 'veritabanii',
+    port: process.env.DB_PORT || 3306,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
+});
+
+// Bağlantıyı test etme
+pool.getConnection()
+    .then(connection => {
+        console.log('MySQL Veritabanı (db.js) Başarıyla Bağlandı.');
+        connection.release();
+    })
+    .catch(err => {
+        console.error('MySQL (db.js) Bağlantı Hatası:', err);
+    });
+
+// Havuzu (pool) diğer dosyalarda kullanmak için export et
+module.exports = pool;
+2. Adım: server.js'i Temizleyin
+
+Şimdi server.js dosyanızdan mysql ve pool ile ilgili satırları silin ve sadece db.js'i require edin:
+
+JavaScript
+
+// server/server.js
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+// const mysql = require('mysql2/promise'); // SİLİNDİ
+
+// ... (JWT Secret kontrolü)
+
+dotenv.config();
+// ... (JWT Secret konsol logu)
+
+const app = express();
+app.use(cors({ /* ... ayarlar ... */ }));
+app.use(express.json());
+
+// MySQL pool tanımı buradan SİLİNDİ
+// MySQL bağlantı testi buradan SİLİNDİ
+
+// Rotalar
+const authRoutes = require('./routes/authRoutes');
+const profileRoutes = require('./routes/profileRoutes');
+app.use('/api/auth', authRoutes);
+app.use('/api/profile', profileRoutes); 
+
+// ... (Health check ve diğer app.get'ler)
+
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, () => {
+  console.log(`Server ${PORT} portunda calisiyor.`);
+  // ...
+});
+3. Adım: profileController.js'i Kontrol Edin
+
+Oluşturduğumuz server/controllers/profileController.js dosyasının en üst satırının bu olduğundan emin olun (Doğru dosya yolunu ../db yerine ./db olarak düzeltiyorum):
+
+JavaScript
+
+// server/controllers/profileController.js
+const pool = require('./db'); // Burası './db' olmalı
+// ... (exports.getProfile ve exports.updateProfile kodları)
+4. Adım: authController.js'i Güncelleyin
+
+authController.js dosyanız da veritabanı (pool) kullanıyordur. Onun da en üstüne const pool = require('./db'); eklediğinizden emin olun.
+
+Bu 4 adımı tamamlayıp, sunucuyu yeniden başlattığınızda (node server.js), sunucu artık çökmeyecek ve /api/profile rotası aktif hale gelecektir. Böylece 404 hatası kaybolacaktır.
+Hata 404 genellikle sunucu tarafında rotanın bulunamamasından kaynaklanır.
+İlk olarak, sunucunun çalışıp çalışmadığını ve rotaların doğru tanımlandığını kontrol etmeliyiz.
+
+Verdiğiniz bilgiye göre, sunucuya yeni bir rota (profileRoutes) eklemişsiniz ve bu rotanın çalışması için sunucuyu yeniden başlatmanız gerekiyor.
+
+Ayrıca, profileRoutes dosyasının doğru bir şekilde oluşturulduğundan ve profileController'daki fonksiyonların doğru export edildiğinden emin olmalıyız.
+
+Ancak, daha önceki mesajınızda belirttiğiniz gibi, veritabanı bağlantısı (pool) server.js içinde tanımlı ve profileController'da farklı bir dosyadan (../db) require edilmeye çalışılıyor. Bu durumda, eğer ../db dosyası yoksa, sunucu başlamayacak ve 404 hatası alacaksınız.
+
+Çözüm olarak, veritabanı bağlantısını ayrı bir dosyaya (db.js) taşıyıp, hem server.js hem de controller'ların bu dosyayı kullanmasını sağlamalıyız.
+
+İşte adımlar:
+
+server/db.js dosyasını oluşturun ve mevcut pool yapılandırmasını buraya taşıyın.
+
+server.js'deki pool tanımını kaldırın ve db.js'den pool'u require edin.
+
+profileController.js ve authController.js'de pool'u yeni db.js dosyasından require edin.
+
+Aşağıda, bu adımları uygulamanız için gerekli kodları yazıyorum.
+
+Adım 1: server/db.js dosyasını oluşturun
+
+javascript
+// server/db.js
+const mysql = require('mysql2/promise');
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+// MySQL bağlantı havuzu oluşturma
+const pool = mysql.createPool({
+  host: process.env.DB_HOST || '127.0.0.1',
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASSWORD || '',
+  database: process.env.DB_NAME || 'veritabanii',
+  port: process.env.DB_PORT || 3306,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
+});
+
+// MySQL bağlantısını test etme
+pool.getConnection()
+  .then(connection => {
+    console.log('MySQL Veritabanı Başarıyla Bağlandı.');
+    connection.release();
+  })
+  .catch(err => {
+    console.error('MySQL Bağlantı Hatası:', err);
+  });
+
+module.exports = pool;
+Adım 2: server/server.js dosyasını güncelleyin
+
+javascript
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+// Artık mysql'i burada require etmiyoruz, db.js'den pool'u alacağız.
+
+// Önce JWT_SECRET kontrolü - eğer yoksa otomatik oluştur
+if (!process.env.JWT_SECRET) {
+  process.env.JWT_SECRET = 'gecici_gelisitirme_anahtari_' + Date.now();
+  console.log('⚠️  JWT_SECRET otomatik oluşturuldu');
+}
+
+dotenv.config();
+
+console.log('JWT_SECRET kontrol:', process.env.JWT_SECRET ? 'Tanımlı' : 'TANIMSIZ!');
+
+const app = express();
+
+// CORS ayarlarını düzgün yapılandır
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+app.use(express.json());
+
+// MySQL bağlantı havuzu artık db.js'den gelecek, burada tanımlanmayacak.
+
+// Rotalar
+const authRoutes = require('./routes/authRoutes');
+const profileRoutes = require('./routes/profileRoutes'); // profileRoutes'u eklediğinizden emin olun
+app.use('/api/auth', authRoutes);
+app.use('/api/profile', profileRoutes); // profile rotasını ekleyin
+
+// Health check endpoint
+app.get('/api/health', (req, res) => {
+  res.json({ 
+    message: 'Backend çalışıyor!', 
+    timestamp: new Date().toISOString(),
+    jwtSecret: process.env.JWT_SECRET ? 'Tanımlı' : 'Tanımsız'
+  });
+});
+
+app.get('/', (req, res) => {
+  res.send('API Calisiyor...');
+});
+
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, () => {
+  console.log(`Server ${PORT} portunda calisiyor.`);
+  console.log('JWT_SECRET durumu:', process.env.JWT_SECRET ? '✓ Tanımlı' : '✗ TANIMSIZ!');
+});
+Adım 3: server/controllers/profileController.js dosyasını güncelleyin
+
+javascript
+// server/controllers/profileController.js
+const pool = require('../db'); // db.js'den pool'u alıyoruz
+
+const getProfile = async (req, res) => {
+  // ... mevcut getProfile kodu
+};
+
+const updateProfile = async (req, res) => {
+  // ... mevcut updateProfile kodu
+};
+
+module.exports = {
+  getProfile,
+  updateProfile
+};
+Adım 4: server/controllers/authController.js dosyasını güncelleyin
+
+javascript
+// server/controllers/authController.js
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const pool = require('../db'); // db.js'den pool'u alıyoruz
+
+// ... mevcut authController kodu
+Bu değişiklikleri yaptıktan sonra, sunucuyu yeniden başlatın. Eğer her şey doğruysa, sunucu çalışacak ve /api/profile rotasına istek atıldığında 404 hatası alınmayacaktır.
+
+Eğer hala 404 hatası alıyorsanız, aşağıdaki noktaları kontrol edin:
+
+Sunucuyu yeniden başlattınız mı?
+
+Rota tanımı doğru mu? (app.use('/api/profile', profileRoutes))
+
+profileRoutes dosyası doğru export ediliyor mu?
+
+profileRoutes içindeki rotalar (örneğin GET /) tanımlı mı?
+
+Umarım bu çözüm işinize yarar. Eğer hala sorun yaşıyorsanız, sunucunun terminal çıktısını paylaşabilir misiniz?
+
+Teşekkürler! Sorunu net bir şekilde açıklamışsınız. Hadi bu sorunu adım adım çözelim:
+
+🚨 SORUN ANALİZİ:
+profileController.js dosyası ../db arıyor ama bu dosya yok
+
+Bu nedenle sunucu başlamıyor ve 404 hatası alıyorsunuz
+
+🔧 ÇÖZÜM ADIMLARI:
+1. Adım: db.js Dosyasını Oluşturun
+Dosya: server/db.js (YENİ DOSYA)
+
+javascript
+// server/db.js
+const mysql = require('mysql2/promise');
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+// MySQL bağlantı havuzu oluşturma
+const pool = mysql.createPool({
+    host: process.env.DB_HOST || '127.0.0.1',
+    user: process.env.DB_USER || 'root',
+    password: process.env.DB_PASSWORD || '',
+    database: process.env.DB_NAME || 'veritabanii',
+    port: process.env.DB_PORT || 3306,
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
+});
+
+// Bağlantıyı test etme
+pool.getConnection()
+    .then(connection => {
+        console.log('✅ MySQL Veritabanı (db.js) Başarıyla Bağlandı.');
+        connection.release();
+    })
+    .catch(err => {
+        console.error('❌ MySQL (db.js) Bağlantı Hatası:', err);
+    });
+
+// Havuzu (pool) diğer dosyalarda kullanmak için export et
+module.exports = pool;
+2. Adım: server.js'i Güncelleyin
+Dosya: server/server.js (GÜNCELLENMİŞ)
+
+javascript
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+// mysql import'u kaldırıldı - artık db.js'ten geliyor
+
+// Önce JWT_SECRET kontrolü - eğer yoksa otomatik oluştur
+if (!process.env.JWT_SECRET) {
+  process.env.JWT_SECRET = 'gecici_gelisitirme_anahtari_' + Date.now();
+  console.log('⚠️  JWT_SECRET otomatik oluşturuldu');
+}
+
+dotenv.config();
+
+console.log('JWT_SECRET kontrol:', process.env.JWT_SECRET ? 'Tanımlı' : 'TANIMSIZ!');
+
+const app = express();
+
+// CORS ayarlarını düzgün yapılandır
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+app.use(express.json());
+
+// ⚠️ MySQL pool tanımı ve testi BURADAN KALDIRILDI
+// Artık db.js dosyasında
+
+// Rotalar
+const authRoutes = require('./routes/authRoutes');
+const profileRoutes = require('./routes/profileRoutes'); // profileRoutes eklendi
+app.use('/api/auth', authRoutes);
+app.use('/api/profile', profileRoutes); // profile rotası eklendi
+
+// Health check endpoint
+app.get('/api/health', (req, res) => {
+  res.json({ 
+    message: 'Backend çalışıyor!', 
+    timestamp: new Date().toISOString(),
+    jwtSecret: process.env.JWT_SECRET ? 'Tanımlı' : 'Tanımsız'
+  });
+});
+
+app.get('/', (req, res) => {
+  res.send('API Calisiyor...');
+});
+
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, () => {
+  console.log(`✅ Server ${PORT} portunda calisiyor.`);
+  console.log('JWT_SECRET durumu:', process.env.JWT_SECRET ? '✓ Tanımlı' : '✗ TANIMSIZ!');
+});
+3. Adım: profileController.js'i Düzeltin
+Dosya: server/controllers/profileController.js (DÜZELTİLMİŞ)
+
+javascript
+// server/controllers/profileController.js
+const pool = require('../db'); // Doğru yol - bir üst klasördeki db.js
+
+const getProfile = async (req, res) => {
+  try {
+    // Örnek profil verisi - sonra veritabanından çekeceğiz
+    res.json({
+      success: true,
+      profile: {
+        username: "testuser",
+        email: "test@example.com",
+        preferences: {
+          style: "casual",
+          size: "M",
+          favoriteColors: ["blue", "black"]
+        }
+      }
+    });
+  } catch (error) {
+    console.error('Profil getirme hatası:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Profil getirilemedi'
+    });
+  }
+};
+
+const updateProfile = async (req, res) => {
+  try {
+    const { preferences } = req.body;
+    
+    // Örnek güncelleme - sonra veritabanına kaydedeceğiz
+    res.json({
+      success: true,
+      message: 'Profil başarıyla güncellendi',
+      profile: {
+        preferences: preferences
+      }
+    });
+  } catch (error) {
+    console.error('Profil güncelleme hatası:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Profil güncellenemedi'
+    });
+  }
+};
+
+module.exports = {
+  getProfile,
+  updateProfile
+};
+4. Adım: authController.js'i Güncelleyin
+Dosya: server/controllers/authController.js (GÜNCELLENMİŞ)
+
+javascript
+// server/controllers/authController.js
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const pool = require('../db'); // Yeni db.js yolunu kullan
+
+// ... mevcut kodunuz aynı kalacak, sadece pool import'u değişti
+🚀 TEST ADIMLARI:
+Sunucuyu durdurun (CTRL+C)
+
+Yukarıdaki 4 dosyayı oluşturun/güncelleyin
+
+Sunucuyu yeniden başlatın: npm run dev
+
+Terminalde şu mesajları kontrol edin:
+
+✅ MySQL Veritabanı (db.js) Başarıyla Bağlandı.
+
+✅ Server 5001 portunda calisiyor.
+
+Test edin: http://localhost:5001/api/profile
+
+🎯 BEKLENEN SONUÇ:
+Artık 404 hatası almamalısınız ve profil endpoint'i çalışmalı!
+
+Bu adımları tamamladıktan sonra sonucu bana bildirin! 🚀
+
+[nodemon] 3.1.10
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node server.js`
+⚠️  JWT_SECRET otomatik oluşturuldu
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+JWT_SECRET kontrol: Tanımlı
+C:\Users\Enes\Desktop\Sanal Deneme Kabini\server\routes\authRoutes.js:9
+module.exports = router;z
+                        ^
+
+ReferenceError: z is not defined
+    at Object.<anonymous> (C:\Users\Enes\Desktop\Sanal Deneme Kabini\server\routes\authRoutes.js:9:25)
+    at Module._compile (node:internal/modules/cjs/loader:1760:14)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:244:24)
+    at Module.require (node:internal/modules/cjs/loader:1503:12)
+    at require (node:internal/modules/helpers:152:16)
+    at Object.<anonymous> (C:\Users\Enes\Desktop\Sanal Deneme Kabini\server\server.js:52:20)
+
+Node.js v24.11.0
+[nodemon] app crashed - waiting for file changes before starting...
+🔍 Sorunu buldum! authRoutes.js dosyasının sonunda z karakteri var. Bu bir yazım hatası.
+
+🔧 Hızlı Çözüm:
+Dosya: server/routes/authRoutes.js (Aç ve düzelt)
+
+javascript
+const express = require('express');
+const router = express.Router();
+const authController = require('../controllers/authController');
+
+// /api/auth/register ve /api/auth/login rotaları
+router.post('/register', authController.register);
+router.post('/login', authController.login);
+
+module.exports = router;
+// 🚨 SON SATIRDA 'z' KARAKTERİNİ SİLİN! 🚨
+Sorun: Dosyanın en sonunda module.exports = router;z şeklinde fazladan bir z karakteri var.
+
+🎯 Düzeltme Adımları:
+server/routes/authRoutes.js dosyasını açın
+
+En son satırı kontrol edin: module.exports = router;
+
+Eğer sonunda z varsa silin
+
+Dosyayı kaydedin
+
+Sunucuyu otomatik yeniden başlatacak (nodemon)
+
+✅ Doğru Olması Gereken:
+javascript
+const express = require('express');
+const router = express.Router();
+const authController = require('../controllers/authController');
+
+router.post('/register', authController.register);
+router.post('/login', authController.login);
+
+module.exports = router; // ✅ BU KADAR - SONUNDA 'z' OLMAMALI
+Bu düzeltmeyi yaptıktan sonra nodemon otomatik olarak sunucuyu yeniden başlatacak ve çalışacak! 🚀
+
+Dosyayı düzelttiğinizde bana haber verin!
+
+tamam düzeldi sen adamsın şimdi bekle yemeğe gidicem gelince seninle bu siteyi geliştirelim biraz
+🎉 HARİKA! Mükemmel, sorun çözüldü!
+
+🍽️ Keyifli yemekler! Ben burada hazır bekliyor olacağım.
+
+Döndüğünde şu konulardan devam edebiliriz:
+
+Ürün/kıyafet yönetimi
+
+Profil sayfası
+
+Sepet sistemi
+
+3D model geliştirmeleri
+
+Güle güle gel! 🚀😊
+
+hadi yapalım
+🎉 MÜKEMMEL! Hadi devam edelim! 🚀
+
+🎯 ŞU ANKI DURUM:
+✅ Authentication sistemi çalışıyor
+
+✅ 3D model çalışıyor
+
+✅ Backend stabil çalışıyor
+
+✅ Profil route'u hazır
+
+🔥 SIRADAKİ ADIM SEÇENEKLERİ:
+Hangi özelliği geliştirelim?
+
+🗂️ Ürün Yönetimi - Kıyafet kataloğu oluşturma
+
+👤 Profil Sayfası - Kullanıcı bilgilerini görüntüleme/güncelleme
+
+🛒 Sepet Sistemi - Alışveriş sepeti fonksiyonelliği
+
+🎨 3D Geliştirmeler - Modelde daha fazla özellik
+
+Benim önerim: Hemen 1. Ürün Yönetimi ile başlayalım ki sitende gerçek kıyafetler görünsün!
+
+Ne dersin - ürün listesi sayfasını tamamlayalım mı? 🔥
+
+1
+🎉 MÜKEMMEL! Hadi ürün yönetimine başlayalım! 🚀
+
+🗂️ ÜRÜN YÖNETİMİ - ADIM 1: BACKEND
+Dosya: server/routes/productRoutes.js (Oluştur)
+
+javascript
+const express = require('express');
+const router = express.Router();
+
+// Test ürün verileri - FastAPI'ye geçince bu kalkacak
+const testProducts = [
+  {
+    id: 1,
+    name: "Mavi Basic Tişört",
+    category: "top",
+    price: 149.99,
+    imageUrl: "https://via.placeholder.com/300x400/007bff/ffffff?text=Mavi+Tişört",
+    description: "Rahat ve şık mavi tişört",
+    inStock: true,
+    meshName: "mesh_0" // 3D modeldeki mesh adı
+  },
+  {
+    id: 2,
+    name: "Siyah Slim Kot",
+    category: "bottom", 
+    price: 299.99,
+    imageUrl: "https://via.placeholder.com/300x400/343a40/ffffff?text=Siyah+Kot",
+    description: "Slim fit siyah kot pantolon",
+    inStock: true,
+    meshName: "CalculusTest01_0"
+  },
+  {
+    id: 3,
+    name: "Beyaz Spor Ayakkabı",
+    category: "shoes",
+    price: 399.99,
+    imageUrl: "https://via.placeholder.com/300x400/ffffff/000000?text=Beyaz+Ayakkabı",
+    description: "Rahat beyaz spor ayakkabı",
+    inStock: false,
+    meshName: "mesh_0"
+  },
+  {
+    id: 4,
+    name: "Gri Sweatshirt",
+    category: "top",
+    price: 229.99,
+    imageUrl: "https://via.placeholder.com/300x400/6c757d/ffffff?text=Gri+Sweatshirt",
+    description: "Sıcak ve konforlu gri sweatshirt",
+    inStock: true,
+    meshName: "CalculusTest01_0"
+  },
+  {
+    id: 5,
+    name: "Kahverengi Deri Ceket",
+    category: "top",
+    price: 599.99,
+    imageUrl: "https://via.placeholder.com/300x400/8B4513/ffffff?text=Deri+Ceket",
+    description: "Şık kahverengi deri ceket",
+    inStock: true,
+    meshName: "mesh_0"
+  },
+  {
+    id: 6,
+    name: "Bej Chino Pantolon",
+    category: "bottom",
+    price: 249.99,
+    imageUrl: "https://via.placeholder.com/300x400/F5F5DC/000000?text=Chino+Pantolon",
+    description: "Rahat bej chino pantolon",
+    inStock: true,
+    meshName: "CalculusTest01_0"
+  }
+];
+
+// Tüm ürünleri getir
+router.get('/', (req, res) => {
+  res.json({
+    success: true,
+    products: testProducts
+  });
+});
+
+// Kategoriye göre ürünleri getir
+router.get('/category/:category', (req, res) => {
+  const { category } = req.params;
+  const filteredProducts = testProducts.filter(product => 
+    product.category === category
+  );
+  
+  res.json({
+    success: true,
+    products: filteredProducts
+  });
+});
+
+// ID'ye göre ürün getir
+router.get('/:id', (req, res) => {
+  const { id } = req.params;
+  const product = testProducts.find(p => p.id === parseInt(id));
+  
+  if (!product) {
+    return res.status(404).json({
+      success: false,
+      message: 'Ürün bulunamadı'
+    });
+  }
+  
+  res.json({
+    success: true,
+    product: product
+  });
+});
+
+module.exports = router;
+🗂️ ADIM 2: BACKEND SERVER'A EKLE
+Dosya: server/server.js (Güncelle)
+
+javascript
+// ... diğer import'lar
+const productRoutes = require('./routes/productRoutes'); // ✅ BU SATIRI EKLE
+
+// ... diğer middleware'ler
+
+// Rotalar
+const authRoutes = require('./routes/authRoutes');
+const profileRoutes = require('./routes/profileRoutes');
+const productRoutes = require('./routes/productRoutes'); // ✅ BU SATIRI EKLE
+app.use('/api/auth', authRoutes);
+app.use('/api/profile', profileRoutes);
+app.use('/api/products', productRoutes); // ✅ BU SATIRI EKLE
+
+// ... geri kalan kod
+🗂️ ADIM 3: FRONTEND - ÜRÜN LİSTESİ SAYFASI
+Dosya: client/src/pages/ProductsPage.jsx (Oluştur)
+
+javascript
+import React, { useState, useEffect } from 'react';
+import { 
+  Container, Row, Col, Card, Button, 
+  Badge, Alert, ButtonGroup, Spinner
+} from 'react-bootstrap';
+import { useAuth } from '../hooks/useAuth';
+import api from '../services/api';
+
+export default function ProductsPage() {
+  const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [activeCategory, setActiveCategory] = useState('all');
+  const { isAuthenticated, user } = useAuth();
+
+  const categories = [
+    { key: 'all', label: '🏠 Tümü' },
+    { key: 'top', label: '👕 Üst Giyim' },
+    { key: 'bottom', label: '👖 Alt Giyim' },
+    { key: 'shoes', label: '👟 Ayakkabı' }
+  ];
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  useEffect(() => {
+    if (activeCategory === 'all') {
+      setFilteredProducts(products);
+    } else {
+      setFilteredProducts(products.filter(product => product.category === activeCategory));
+    }
+  }, [activeCategory, products]);
+
+  const fetchProducts = async () => {
+    try {
+      setLoading(true);
+      const response = await api.get('/api/products');
+      setProducts(response.data.products);
+      setFilteredProducts(response.data.products);
+    } catch (err) {
+      setError('Ürünler yüklenirken hata oluştu');
+      console.error('Ürün yükleme hatası:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleAddToCart = (product) => {
+    alert(`🛒 ${product.name} sepete eklendi!\n💵 Fiyat: ${product.price} ₺`);
+  };
+
+  const handleTryOn = (product) => {
+    alert(`🎮 "${product.name}" 3D modelde denemek için ana sayfaya yönlendiriliyorsunuz!`);
+    // İleride ana sayfaya yönlendirip 3D modeli güncelleyeceğiz
+    window.location.href = '/';
+  };
+
+  if (loading) {
+    return (
+      <Container className="py-5 text-center">
+        <Spinner animation="border" variant="primary" />
+        <p className="mt-2">Ürünler yükleniyor...</p>
+      </Container>
+    );
+  }
+
+  return (
+    <Container className="py-4">
+      {/* Başlık */}
+      <Row className="mb-4">
+        <Col>
+          <h1 className="display-5 fw-bold">👕 Kıyafet Kataloğu</h1>
+          <p className="text-muted">En yeni trendleri keşfedin ve sanal olarak deneyin</p>
+        </Col>
+      </Row>
+
+      {error && <Alert variant="danger">{error}</Alert>}
+
+      {/* Kategori Filtreleri */}
+      <Row className="mb-4">
+        <Col>
+          <Card className="shadow-sm">
+            <Card.Body>
+              <h5 className="mb-3">Kategoriler</h5>
+              <ButtonGroup>
+                {categories.map(category => (
+                  <Button
+                    key={category.key}
+                    variant={activeCategory === category.key ? "primary" : "outline-primary"}
+                    onClick={() => setActiveCategory(category.key)}
+                  >
+                    {category.label}
+                  </Button>
+                ))}
+              </ButtonGroup>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+
+      {/* Ürün Grid */}
+      <Row className="g-4">
+        {filteredProducts.map(product => (
+          <Col key={product.id} xs={12} sm={6} lg={4} xl={3}>
+            <Card className="h-100 shadow-sm product-card">
+              <div className="position-relative">
+                <Card.Img 
+                  variant="top" 
+                  src={product.imageUrl}
+                  style={{ height: '250px', objectFit: 'cover' }}
+                />
+                {!product.inStock && (
+                  <Badge bg="danger" className="position-absolute top-0 end-0 m-2">
+                    Stokta Yok
+                  </Badge>
+                )}
+              </div>
+              
+              <Card.Body className="d-flex flex-column">
+                <Card.Title className="h6">{product.name}</Card.Title>
+                <Card.Text className="text-muted small flex-grow-1">
+                  {product.description}
+                </Card.Text>
+                
+                <div className="mt-auto">
+                  <div className="d-flex justify-content-between align-items-center mb-2">
+                    <span className="h5 text-primary mb-0">{product.price} ₺</span>
+                    <Badge bg="secondary" text="light">
+                      {product.category === 'top' && '👕'}
+                      {product.category === 'bottom' && '👖'} 
+                      {product.category === 'shoes' && '👟'}
+                    </Badge>
+                  </div>
+                  
+                  <div className="d-grid gap-2">
+                    <Button 
+                      variant="outline-primary"
+                      size="sm"
+                      onClick={() => handleTryOn(product)}
+                    >
+                      🎮 Sanal Dene
+                    </Button>
+                    
+                    <Button 
+                      variant={product.inStock ? "primary" : "secondary"}
+                      size="sm"
+                      onClick={() => handleAddToCart(product)}
+                      disabled={!product.inStock}
+                    >
+                      {product.inStock ? '🛒 Sepete Ekle' : 'Stokta Yok'}
+                    </Button>
+                  </div>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+
+      {/* Ürün Yoksa */}
+      {filteredProducts.length === 0 && !loading && (
+        <Row>
+          <Col className="text-center py-5">
+            <div className="display-1 text-muted mb-3">🛍️</div>
+            <h4>Bu kategoride ürün bulunmuyor</h4>
+            <p className="text-muted">Diğer kategorileri kontrol edin veya daha sonra tekrar ziyaret edin.</p>
+            <Button 
+              variant="outline-primary"
+              onClick={() => setActiveCategory('all')}
+            >
+              Tüm Ürünleri Gör
+            </Button>
+          </Col>
+        </Row>
+      )}
+    </Container>
+  );
+}
+🗂️ ADIM 4: ROUTE'U EKLE
+Dosya: client/src/App.jsx (Güncelle)
+
+javascript
+// ... diğer import'lar
+import ProductsPage from './pages/ProductsPage'; // ✅ BU SATIRI EKLE
+
+function App() {
+  return (
+    <>
+      <NavbarComponent />
+      <main className="app-content">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/products" element={<ProductsPage />} /> {/* ✅ BU SATIRI EKLE */}
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+        </Routes>
+      </main>
+    </>
+  );
+}
+🗂️ ADIM 5: NAVBAR'A LİNK EKLE
+Dosya: client/src/components/layout/Navbar.jsx (Güncelle)
+
+javascript
+// ... diğer kodlar
+<Nav className="ms-auto align-items-center">
+  <LinkContainer to="/">
+    <Nav.Link>🏠 Ana Sayfa</Nav.Link>
+  </LinkContainer>
+  <LinkContainer to="/products">
+    <Nav.Link>🛍️ Ürünler</Nav.Link> {/* ✅ BU SATIRI EKLE */}
+  </LinkContainer>
+  
+  {isAuthenticated ? (
+    // ... giriş yapmış kullanıcı menüsü
+  ) : (
+    // ... giriş yapmamış kullanıcı menüsü
+  )}
+</Nav>
+🚀 TEST ZAMANI!
+Backend'i başlat: npm run dev (server klasöründe)
+
+Frontend'i başlat: npm run dev (client klasöründe)
+
+http://localhost:5173/products adresine git
+
+Ürünleri gör, kategorilere göre filtrele ve butonlara tıkla!
+
+🎯 ÖZELLİKLER:
+✅ 6 test ürünü
+
+✅ Kategori filtreleme
+
+✅ Stok durumu göstergesi
+
+✅ Sanal deneme butonu
+
+✅ Sepete ekleme butonu
+
+✅ Responsive tasarım
+
+Hadi test edelim ve harika ürün kataloğumuzu görelim! 🚀
+
+dikkatimi çeken bişi var const profileRoutes = require('./routes/profileRoutes') bu sayfayı oluşturmadım sanırsam
+🔍 Haklısın! profileRoutes.js dosyasını henüz oluşturmadık. Hadi hemen oluşturalım:
+
+🚨 EKSİK DOSYAYI OLUŞTURALIM:
+Dosya: server/routes/profileRoutes.js (YENİ DOSYA)
+
+javascript
+const express = require('express');
+const router = express.Router();
+const profileController = require('../controllers/profileController');
+
+// GET /api/profile - Kullanıcı profilini getir
+router.get('/', profileController.getProfile);
+
+// PUT /api/profile - Kullanıcı profilini güncelle
+router.put('/', profileController.updateProfile);
+
+module.exports = router;
+🔧 Ayrıca profileController.js'i de kontrol edelim:
+Dosya: server/controllers/profileController.js (Eğer yoksa oluştur)
+
+javascript
+const pool = require('../db');
+
+const getProfile = async (req, res) => {
+  try {
+    // Örnek profil verisi - sonra veritabanından çekeceğiz
+    res.json({
+      success: true,
+      profile: {
+        username: "testuser",
+        email: "test@example.com",
+        preferences: {
+          style: "casual",
+          size: "M",
+          favoriteColors: ["blue", "black"],
+          favoriteCategories: ["top", "shoes"]
+        }
+      }
+    });
+  } catch (error) {
+    console.error('Profil getirme hatası:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Profil getirilemedi'
+    });
+  }
+};
+
+const updateProfile = async (req, res) => {
+  try {
+    const { preferences } = req.body;
+    
+    // Örnek güncelleme - sonra veritabanına kaydedeceğiz
+    res.json({
+      success: true,
+      message: 'Profil başarıyla güncellendi',
+      profile: {
+        preferences: preferences || {
+          style: "casual",
+          size: "M",
+          favoriteColors: ["blue", "black"]
+        }
+      }
+    });
+  } catch (error) {
+    console.error('Profil güncelleme hatası:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Profil güncellenemedi'
+    });
+  }
+};
+
+module.exports = {
+  getProfile,
+  updateProfile
+};
+🎯 ŞİMDİ TEST EDELİM:
+Yukarıdaki 2 dosyayı oluşturun
+
+Sunucuyu yeniden başlatın: npm run dev
+
+Test edin: http://localhost:5001/api/profile
+
+✅ BEKLENEN SONUÇ:
+json
+{
+  "success": true,
+  "profile": {
+    "username": "testuser",
+    "email": "test@example.com",
+    "preferences": {
+      "style": "casual",
+      "size": "M",
+      "favoriteColors": ["blue", "black"],
+      "favoriteCategories": ["top", "shoes"]
+    }
+  }
+}
+Bu düzeltmeyi yaptıktan sonra ürün sayfasına geçebiliriz! 🚀
+
+Dosyaları oluşturduğunuzda haber verin!
+
+chunk-C4KFTZQU.js?v=d3261cc8:595 Uncaught Error: React.Children.only expected to receive a single React element child.
+    at Object.only (chunk-C4KFTZQU.js?v=d3261cc8:595:19)
+    at LinkContainer2 (react-router-bootstrap.js?v=d3261cc8:143:46)
+    at Object.react_stack_bottom_frame (chunk-AYZULF46.js?v=d3261cc8:18509:20)
+    at renderWithHooks (chunk-AYZULF46.js?v=d3261cc8:5654:24)
+    at updateFunctionComponent (chunk-AYZULF46.js?v=d3261cc8:7475:21)
+    at beginWork (chunk-AYZULF46.js?v=d3261cc8:8525:20)
+    at runWithFiberInDEV (chunk-AYZULF46.js?v=d3261cc8:997:72)
+    at performUnitOfWork (chunk-AYZULF46.js?v=d3261cc8:12561:98)
+    at workLoopSync (chunk-AYZULF46.js?v=d3261cc8:12424:43)
+    at renderRootSync (chunk-AYZULF46.js?v=d3261cc8:12408:13)Understand this error
+chunk-AYZULF46.js?v=d3261cc8:6966 An error occurred in the <LinkContainer2> component.
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. ve bıde server kısmı çalıştırılmıyor [nodemon] app crashed - waiting for file changes before starting...
+🔍 İki sorun var! Hadi teker teker çözelim:
+
+🚨 1. SORUN: LinkContainer Hatası
+Sorun: LinkContainer bileşeni sadece tek bir child bekliyor, ama biz buton içinde hem ikon hem de yazı kullanıyoruz.
+
+Çözüm - Navbar.jsx'i düzeltelim:
+
+Dosya: client/src/components/layout/Navbar.jsx (DÜZELTİLMİŞ)
+
+javascript
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../hooks/useAuth';
+
+// React-Bootstrap bileşenleri
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Button from 'react-bootstrap/Button';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
+export default function NavbarComponent() {
+  const { isAuthenticated, user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
+
+  return (
+    <Navbar fixed="top" bg="white" expand="lg" className="shadow-sm" style={{ height: '80px' }}>
+      <Container>
+        
+        {/* Logo/Marka */}
+        <Navbar.Brand as={Link} to="/" style={{ fontSize: '1.8rem', fontWeight: 'bold', color: '#0d6efd' }}>
+          SanalDeneme
+        </Navbar.Brand>
+        
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          
+          {/* Linkleri sağa yaslıyoruz */}
+          <Nav className="ms-auto align-items-center">
+            
+            {/* Ana Sayfa Linki */}
+            <Nav.Link as={Link} to="/">
+              🏠 Ana Sayfa
+            </Nav.Link>
+            
+            {/* Ürünler Linki */}
+            <Nav.Link as={Link} to="/products">
+              🛍️ Ürünler
+            </Nav.Link>
+            
+            {isAuthenticated ? (
+              // ---- EĞER GİRİŞ YAPMIŞSA ----
+              <>
+                <Nav.Link as={Link} to="/profile">
+                  👤 Profil
+                </Nav.Link>
+
+                {/* Kullanıcı Adı ve Çıkış için bir açılır menü */}
+                <NavDropdown title={`Merhaba, ${user?.username || user?.email}`} id="basic-nav-dropdown">
+                  <NavDropdown.Item onClick={handleLogout}>
+                    Çıkış Yap
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </>
+
+            ) : (
+              // ---- EĞER GİRİŞ YAPMAMIŞSA ----
+              <>
+                <Nav.Link as={Link} to="/login">
+                  Giriş Yap
+                </Nav.Link>
+                
+                {/* Kayıt Ol Butonu */}
+                <Button 
+                  as={Link} 
+                  to="/register" 
+                  variant="primary" 
+                  className="ms-2"
+                >
+                  Kayıt Ol
+                </Button>
+              </>
+            )}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+}
+🚨 2. SORUN: Server Çökmesi
+Sorun: Server başlamıyor ve crash oluyor.
+
+Çözüm - Hata mesajını görmek için:
+
+Terminalde şu komutu çalıştır:
+
+bash
+cd server
+node server.js
+Hata mesajını buraya yapıştır ki tam olarak ne olduğunu görelim.
+
+🔧 Hızlı Kontrol için server.js:
+Dosya: server/server.js (Kontrol et)
+
+javascript
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+// mysql import'u kaldırıldı - artık db.js'ten geliyor
+
+// Önce JWT_SECRET kontrolü
+if (!process.env.JWT_SECRET) {
+  process.env.JWT_SECRET = 'gecici_gelisitirme_anahtari_' + Date.now();
+  console.log('⚠️  JWT_SECRET otomatik oluşturuldu');
+}
+
+dotenv.config();
+
+console.log('JWT_SECRET kontrol:', process.env.JWT_SECRET ? 'Tanımlı' : 'TANIMSIZ!');
+
+const app = express();
+
+// CORS ayarları
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+app.use(express.json());
+
+// Rotalar
+const authRoutes = require('./routes/authRoutes');
+const profileRoutes = require('./routes/profileRoutes');
+const productRoutes = require('./routes/productRoutes');
+app.use('/api/auth', authRoutes);
+app.use('/api/profile', profileRoutes);
+app.use('/api/products', productRoutes);
+
+// Health check
+app.get('/api/health', (req, res) => {
+  res.json({ 
+    message: 'Backend çalışıyor!', 
+    timestamp: new Date().toISOString()
+  });
+});
+
+app.get('/', (req, res) => {
+  res.send('API Calisiyor...');
+});
+
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, () => {
+  console.log(`✅ Server ${PORT} portunda calisiyor.`);
+});
+🎯 TEST ADIMLARI:
+Önce Navbar.jsx'i düzelt
+
+Sonra terminalde server hatasını kontrol et: node server.js
+
+Hata mesajını buraya yapıştır
+
+Bu iki sorunu da çözdükten sonra ürün sayfasına geçebiliriz! 🚀
+
+C:\Users\Enes\Desktop\Sanal Deneme Kabini\server\server.js:55
+const productRoutes = require('./routes/productRoutes');
+      ^
+
+SyntaxError: Identifier 'productRoutes' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1691:18)
+    at Module._compile (node:internal/modules/cjs/loader:1734:20)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1480:32)
+    at Module._load (node:internal/modules/cjs/loader:1299:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:244:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)     
+    at node:internal/main/run_main_module:33:47
+
+Node.js v24.11.0
+PS C:\Users\Enes\Desktop\Sanal Deneme Kabini\server>
+🔍 Sorunu buldum! productRoutes değişkenini iki kez tanımlamışsınız.
+
+🚨 ÇÖZÜM: server.js'i Düzeltelim
+Dosya: server/server.js (DÜZELTİLMİŞ)
+
+javascript
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+// mysql import'u kaldırıldı - artık db.js'ten geliyor
+
+// Önce JWT_SECRET kontrolü
+if (!process.env.JWT_SECRET) {
+  process.env.JWT_SECRET = 'gecici_gelisitirme_anahtari_' + Date.now();
+  console.log('⚠️  JWT_SECRET otomatik oluşturuldu');
+}
+
+dotenv.config();
+
+console.log('JWT_SECRET kontrol:', process.env.JWT_SECRET ? 'Tanımlı' : 'TANIMSIZ!');
+
+const app = express();
+
+// CORS ayarları
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+app.use(express.json());
+
+// ⚠️ SADECE BİR KEZ TANIMLA - AYNI DEĞİŞKENİ İKİ KEZ TANIMLAMA!
+const authRoutes = require('./routes/authRoutes');
+const profileRoutes = require('./routes/profileRoutes');
+const productRoutes = require('./routes/productRoutes'); // ✅ BURADA TANIMLANDI
+
+// Rotaları kullan
+app.use('/api/auth', authRoutes);
+app.use('/api/profile', profileRoutes);
+app.use('/api/products', productRoutes); // ✅ BURADA KULLAN
+
+// Health check
+app.get('/api/health', (req, res) => {
+  res.json({ 
+    message: 'Backend çalışıyor!', 
+    timestamp: new Date().toISOString()
+  });
+});
+
+app.get('/', (req, res) => {
+  res.send('API Calisiyor...');
+});
+
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, () => {
+  console.log(`✅ Server ${PORT} portunda calisiyor.`);
+});
+🔧 HATALI KOD (SİLİNECEK):
+Eğer server.js'te şöyle bir satır varsa SİLİN:
+
+javascript
+// 🚨 BU SATIRI SİL - ÇÜNKÜ productRoutes YUKARIDA TANIMLANDI
+const productRoutes = require('./routes/productRoutes'); // ❌ SİL
+🎯 KONTROL LİSTESİ:
+server.js'te productRoutes sadece bir kez tanımlanmalı
+
+Navbar.jsx düzeltildi mi?
+
+productRoutes.js dosyası oluşturuldu mu?
+
+🚀 TEST:
+server.js'i yukarıdaki gibi düzelt
+
+Sunucuyu başlat: npm run dev
+
+Test et: http://localhost:5001/api/health
+
+Bu düzeltmeyi yaptıktan sonra her şey çalışacak! 🎉
+
+Düzeltme yaptığınızda haber verin!
+
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+const mysql = require('mysql2/promise');
+const productRoutes = require('./routes/productRoutes');
+
+// Önce JWT_SECRET kontrolü - eğer yoksa otomatik oluştur
+if (!process.env.JWT_SECRET) {
+  process.env.JWT_SECRET = 'gecici_gelisitirme_anahtari_' + Date.now();
+  console.log('⚠️  JWT_SECRET otomatik oluşturuldu');
+}
+
+// dotenv'i yükle
+dotenv.config();
+
+console.log('JWT_SECRET kontrol:', process.env.JWT_SECRET ? 'Tanımlı' : 'TANIMSIZ!');
+
+const app = express();
+
+// CORS ayarlarını düzgün yapılandır
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+app.use(express.json());
+
+// MySQL bağlantı havuzu oluşturma
+const pool = mysql.createPool({
+  host: process.env.DB_HOST || '127.0.0.1',
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASSWORD || '',
+  database: process.env.DB_NAME || 'veritabanii',
+  port: process.env.DB_PORT || 3306,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
+});
+
+// MySQL bağlantısını test etme
+pool.getConnection()
+  .then(connection => {
+    console.log('MySQL Veritabanı Başarıyla Bağlandı.');
+    connection.release();
+  })
+  .catch(err => {
+    console.error('MySQL Bağlantı Hatası:', err);
+  });
+
+// Rotalar
+const authRoutes = require('./routes/authRoutes');
+const profileRoutes = require('./routes/profileRoutes');
+const productRoutes = require('./routes/productRoutes');
+app.use('/api/auth', authRoutes);
+app.use('/api/profile', profileRoutes);
+app.use('/api/products', productRoutes);
+// Health check endpoint
+app.get('/api/health', (req, res) => {
+  res.json({ 
+    message: 'Backend çalışıyor!', 
+    timestamp: new Date().toISOString(),
+    jwtSecret: process.env.JWT_SECRET ? 'Tanımlı' : 'Tanımsız'
+  });
+});
+
+app.get('/', (req, res) => {
+  res.send('API Calisiyor...');
+});
+
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, () => {
+  console.log(`Server ${PORT} portunda calisiyor.`);
+  console.log('JWT_SECRET durumu:', process.env.JWT_SECRET ? '✓ Tanımlı' : '✗ TANIMSIZ!');
+  console.log('JWT_SECRET değeri:', process.env.JWT_SECRET);
+});
+🎯 SORUN BULUNDU! productRoutes değişkenini iki kez tanımlamışsınız:
+
+🚨 HATALI SATIRLAR:
+javascript
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+const mysql = require('mysql2/promise');
+const productRoutes = require('./routes/productRoutes'); // ❌ 1. TANIMLAMA (SİL)
+
+// ... diğer kodlar
+
+// Rotalar
+const authRoutes = require('./routes/authRoutes');
+const profileRoutes = require('./routes/profileRoutes');
+const productRoutes = require('./routes/productRoutes'); // ❌ 2. TANIMLAMA
+🔧 ÇÖZÜM: server.js'i Düzelt
+Dosya: server/server.js (DÜZELTİLMİŞ)
+
+javascript
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+const mysql = require('mysql2/promise');
+// 🚨 BU SATIRI SİL: const productRoutes = require('./routes/productRoutes');
+
+// Önce JWT_SECRET kontrolü - eğer yoksa otomatik oluştur
+if (!process.env.JWT_SECRET) {
+  process.env.JWT_SECRET = 'gecici_gelisitirme_anahtari_' + Date.now();
+  console.log('⚠️  JWT_SECRET otomatik oluşturuldu');
+}
+
+// dotenv'i yükle
+dotenv.config();
+
+console.log('JWT_SECRET kontrol:', process.env.JWT_SECRET ? 'Tanımlı' : 'TANIMSIZ!');
+
+const app = express();
+
+// CORS ayarlarını düzgün yapılandır
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+app.use(express.json());
+
+// MySQL bağlantı havuzu oluşturma
+const pool = mysql.createPool({
+  host: process.env.DB_HOST || '127.0.0.1',
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASSWORD || '',
+  database: process.env.DB_NAME || 'veritabanii',
+  port: process.env.DB_PORT || 3306,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
+});
+
+// MySQL bağlantısını test etme
+pool.getConnection()
+  .then(connection => {
+    console.log('MySQL Veritabanı Başarıyla Bağlandı.');
+    connection.release();
+  })
+  .catch(err => {
+    console.error('MySQL Bağlantı Hatası:', err);
+  });
+
+// ✅ TEK BİR YERDE TANIMLA - ROTALAR
+const authRoutes = require('./routes/authRoutes');
+const profileRoutes = require('./routes/profileRoutes');
+const productRoutes = require('./routes/productRoutes'); // ✅ BURADA TANIMLA
+
+// Rotaları kullan
+app.use('/api/auth', authRoutes);
+app.use('/api/profile', profileRoutes);
+app.use('/api/products', productRoutes);
+
+// Health check endpoint
+app.get('/api/health', (req, res) => {
+  res.json({ 
+    message: 'Backend çalışıyor!', 
+    timestamp: new Date().toISOString(),
+    jwtSecret: process.env.JWT_SECRET ? 'Tanımlı' : 'Tanımsız'
+  });
+});
+
+app.get('/', (req, res) => {
+  res.send('API Calisiyor...');
+});
+
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, () => {
+  console.log(`Server ${PORT} portunda calisiyor.`);
+  console.log('JWT_SECRET durumu:', process.env.JWT_SECRET ? '✓ Tanımlı' : '✗ TANIMSIZ!');
+});
+🎯 YAPMAN GEREKEN TEK ŞEY:
+server.js dosyasını aç
+
+4. satırdaki bu kodu sil:
+
+javascript
+const productRoutes = require('./routes/productRoutes'); // ❌ SİL
+Dosyayı kaydet
+
+🚀 TEST:
+Sunucuyu yeniden başlat: npm run dev
+
+Test et: http://localhost:5001/api/health
+
+Ürünleri test et: http://localhost:5001/api/products
+
+Bu kadar! Artık çalışacak! 🎉
+
+Düzeltmeyi yaptığınızda haber verin!
+
+[nodemon] app crashed - waiting for file changes before starting...
+🔍 Sunucu hala çöküyor! Terminaldeki tam hata mesajını görmemiz lazım.
+
+🚨 HATA MESAJINI GÖRMEK İÇİN:
+Terminalde şu komutu çalıştır:
+
+bash
+cd server
+node server.js
+Ve çıkan tam hata mesajını buraya kopyala!
+
+🔧 OLASI SORUNLAR:
+Eksik dosya (productRoutes.js oluşturulmadı)
+
+Yazım hatası (dosya ismi yanlış)
+
+db.js çakışması (hem db.js hem de server.js'te pool var)
+
+🎯 HIZLI ÇÖZÜM DENEMESİ:
+1. productRoutes.js dosyasını kontrol et:
+
+server/routes/productRoutes.js dosyası var mı?
+
+İçeriği doğru mu?
+
+2. Veya geçici çözüm - productRoutes'u devre dışı bırak:
+
+javascript
+// server.js'te bu satırları yorum satırı yap:
+// const productRoutes = require('./routes/productRoutes');
+// app.use('/api/products', productRoutes);
+3. db.js çakışmasını çöz:
+Eğer hem db.js hem de server.js'te MySQL pool tanımı varsa, birini kaldır.
+
+🚀 ACİL ÇÖZÜM - BASİT SERVER:
+Geçici olarak bu server.js'i kullan:
+
+javascript
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+
+dotenv.config();
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Basit test endpoint'leri
+app.get('/api/health', (req, res) => {
+  res.json({ message: 'Backend çalışıyor!' });
+});
+
+app.get('/api/products', (req, res) => {
+  res.json({
+    success: true,
+    products: [
+      { id: 1, name: "Test Ürün", price: 100 }
+    ]
+  });
+});
+
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, () => {
+  console.log(`✅ Server ${PORT} portunda calisiyor.`);
+});
+Lütfen terminaldeki tam hata mesajını paylaş ki doğru çözümü bulalım! 🔍
+
+const express = require('express');
+const router = express.Router();
+
+// Test ürün verileri - FastAPI'ye geçince bu kalkacak
+const testProducts = [
+  {
+    id: 1,
+    name: "Mavi Basic Tişört",
+    category: "top",
+    price: 149.99,
+    imageUrl: "https://via.placeholder.com/300x400/007bff/ffffff?text=Mavi+Tişört",
+    description: "Rahat ve şık mavi tişört",
+    inStock: true,
+    meshName: "mesh_0" // 3D modeldeki mesh adı
+  },
+  {
+    id: 2,
+    name: "Siyah Slim Kot",
+    category: "bottom", 
+    price: 299.99,
+    imageUrl: "https://via.placeholder.com/300x400/343a40/ffffff?text=Siyah+Kot",
+    description: "Slim fit siyah kot pantolon",
+    inStock: true,
+    meshName: "CalculusTest01_0"
+  },
+  {
+    id: 3,
+    name: "Beyaz Spor Ayakkabı",
+    category: "shoes",
+    price: 399.99,
+    imageUrl: "https://via.placeholder.com/300x400/ffffff/000000?text=Beyaz+Ayakkabı",
+    description: "Rahat beyaz spor ayakkabı",
+    inStock: false,
+    meshName: "mesh_0"
+  },
+  {
+    id: 4,
+    name: "Gri Sweatshirt",
+    category: "top",
+    price: 229.99,
+    imageUrl: "https://via.placeholder.com/300x400/6c757d/ffffff?text=Gri+Sweatshirt",
+    description: "Sıcak ve konforlu gri sweatshirt",
+    inStock: true,
+    meshName: "CalculusTest01_0"
+  },
+  {
+    id: 5,
+    name: "Kahverengi Deri Ceket",
+    category: "top",
+    price: 599.99,
+    imageUrl: "https://via.placeholder.com/300x400/8B4513/ffffff?text=Deri+Ceket",
+    description: "Şık kahverengi deri ceket",
+    inStock: true,
+    meshName: "mesh_0"
+  },
+  {
+    id: 6,
+    name: "Bej Chino Pantolon",
+    category: "bottom",
+    price: 249.99,
+    imageUrl: "https://via.placeholder.com/300x400/F5F5DC/000000?text=Chino+Pantolon",
+    description: "Rahat bej chino pantolon",
+    inStock: true,
+    meshName: "CalculusTest01_0"
+  }
+];
+
+// Tüm ürünleri getir
+router.get('/', (req, res) => {
+  res.json({
+    success: true,
+    products: testProducts
+  });
+});
+
+// Kategoriye göre ürünleri getir
+router.get('/category/:category', (req, res) => {
+  const { category } = req.params;
+  const filteredProducts = testProducts.filter(product => 
+    product.category === category
+  );
+  
+  res.json({
+    success: true,
+    products: filteredProducts
+  });
+});
+
+// ID'ye göre ürün getir
+router.get('/:id', (req, res) => {
+  const { id } = req.params;
+  const product = testProducts.find(p => p.id === parseInt(id));
+  
+  if (!product) {
+    return res.status(404).json({
+      success: false,
+      message: 'Ürün bulunamadı'
+    });
+  }
+  
+  res.json({
+    success: true,
+    product: product
+  });
+});
+
+module.exports = router;
+🎉 MÜKEMMEL! productRoutes.js dosyanız doğru görünüyor.
+
+Şimdi terminaldeki tam hata mesajını görmemiz gerekiyor. Lütfen:
+
+🚨 TERMİNALDE BU KOMUTU ÇALIŞTIRIN:
+bash
+cd server
+node server.js
+Ve çıkan TAM hata mesajını buraya kopyalayın!
+
+🔍 OLASI SORUNLAR (Tahminlerim):
+db.js çakışması - hem db.js hem de server.js'te MySQL pool var
+
+Eksik modül - bir paket kurulu değil
+
+Dosya yolu hatası - yanlış require path
+
+🎯 HIZLI ÇÖZÜM DENEMELERİ:
+Deneyebileceğiniz çözümler:
+
+1. MySQL pool çakışmasını çöz:
+
+javascript
+// server.js'te MySQL pool kısmını SİL veya yorum satırı yap:
+/*
+const pool = mysql.createPool({
+  // MySQL ayarları
+});
+*/
+2. Basit server.js deneyelim:
+
+javascript
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+
+dotenv.config();
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Sadece gerekli route'lar
+const authRoutes = require('./routes/authRoutes');
+const profileRoutes = require('./routes/profileRoutes'); 
+const productRoutes = require('./routes/productRoutes');
+
+app.use('/api/auth', authRoutes);
+app.use('/api/profile', profileRoutes);
+app.use('/api/products', productRoutes);
+
+app.get('/api/health', (req, res) => {
+  res.json({ message: 'Backend çalışıyor!' });
+});
+
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, () => {
+  console.log(`✅ Server ${PORT} portunda calisiyor.`);
+});
+Lütfen terminaldeki TAM hata mesajını paylaşın, böylece kesin çözümü bulalım! 🔍
+
+yok olmadı
+🔧 Hadi sorunu kökünden çözelim! Backend'i sıfırdan düzgün şekilde kuralım:
+
+🚀 1. ADIM: SERVER.JS'İ SADELEŞTİRELİM
+Dosya: server/server.js (YENİ VE TEMİZ)
+
+javascript
+const express = require('express');
+const dotenv = require('dotenv');
+const cors = require('cors');
+
+// Çevre değişkenlerini yükle
+dotenv.config();
+
+const app = express();
+
+// Middleware'ler
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true
+}));
+app.use(express.json());
+
+// Rotaları import et
+const authRoutes = require('./routes/authRoutes');
+const profileRoutes = require('./routes/profileRoutes');
+const productRoutes = require('./routes/productRoutes');
+
+// Rotaları kullan
+app.use('/api/auth', authRoutes);
+app.use('/api/profile', profileRoutes);
+app.use('/api/products', productRoutes);
+
+// Test endpoint'i
+app.get('/api/health', (req, res) => {
+  res.json({ 
+    success: true,
+    message: '✅ Backend çalışıyor!',
+    timestamp: new Date().toISOString()
+  });
+});
+
+// Ana sayfa
+app.get('/', (req, res) => {
+  res.send('Sanal Deneme API - Çalışıyor!');
+});
+
+// Başlat
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, () => {
+  console.log(`🎉 Server ${PORT} portunda çalışıyor!`);
+  console.log(`📍 Health check: http://localhost:${PORT}/api/health`);
+  console.log(`📍 Ürünler: http://localhost:${PORT}/api/products`);
+});
+🚀 2. ADIM: AUTHCONTROLLER.JS'İ KONTROL EDELİM
+Dosya: server/controllers/authController.js (Kontrol et)
+
+javascript
+// Sadece bu import'lar olmalı:
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+// pool import'u SİLİNMİŞ olmalı!
+
+const register = async (req, res) => {
+  try {
+    // Basit test response
+    res.json({
+      success: true,
+      message: 'Kayıt başarılı (test)',
+      user: { id: 1, username: 'testuser', email: req.body.email }
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'Sunucu hatası' });
+  }
+};
+
+const login = async (req, res) => {
+  try {
+    // Basit test response
+    res.json({
+      success: true,
+      message: 'Giriş başarılı (test)',
+      user: { id: 1, username: 'testuser', email: req.body.email },
+      token: 'test_token_123'
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, message: 'Sunucu hatası' });
+  }
+};
+
+module.exports = { register, login };
+🚀 3. ADIM: PROFILECONTROLLER.JS'İ KONTROL EDELİM
+Dosya: server/controllers/profileController.js (Kontrol et)
+
+javascript
+// pool import'u SİLİNMİŞ olmalı!
+
+const getProfile = async (req, res) => {
+  res.json({
+    success: true,
+    profile: {
+      username: "testuser",
+      email: "test@example.com"
+    }
+  });
+};
+
+const updateProfile = async (req, res) => {
+  res.json({
+    success: true,
+    message: 'Profil güncellendi (test)'
+  });
+};
+
+module.exports = { getProfile, updateProfile };
+🎯 YAPMAN GEREKENLER:
+server.js'i yukarıdaki TEMİZ kodla değiştir
+
+authController.js ve profileController.js'teki pool import'larını SİL
+
+Terminalde test et:
+
+bash
+cd server
+node server.js
+🚨 EĞER HALA ÇALIŞMAZSA:
+Bu komutları sırayla çalıştır:
+
+bash
+cd server
+npm install
+node server.js
+Terminal çıktısını buraya yapıştır!
+
+Kesin çözüm için terminal çıktısına ihtiyacım var! 🔍
+
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const mysql = require('mysql2/promise');
+
+// MySQL bağlantı havuzu
+const pool = mysql.createPool({
+  host: process.env.DB_HOST || '127.0.0.1',
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASSWORD || '',
+  database: process.env.DB_NAME || 'veritabanii',
+  port: process.env.DB_PORT || 3306,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
+});
+
+const register = async (req, res) => {
+  const { username, email, password } = req.body;
+
+  console.log('Register isteği alındı:', { username, email });
+
+  // Validasyon
+  if (!username || !email || !password) {
+    return res.status(400).json({ 
+      success: false,
+      message: 'Tüm alanları doldurun.' 
+    });
+  }
+
+  try {
+    // Kullanıcı var mı kontrol et
+    const [existingUsers] = await pool.execute(
+      'SELECT * FROM users WHERE email = ? OR username = ?',
+      [email, username]
+    );
+
+    if (existingUsers.length > 0) {
+      return res.status(400).json({ 
+        success: false,
+        message: 'Bu email veya kullanıcı adı zaten kullanılıyor.' 
+      });
+    }
+
+    // Şifreyi hashle
+    const hashedPassword = await bcrypt.hash(password, 12);
+
+    // Kullanıcıyı veritabanına ekle
+    const [result] = await pool.execute(
+      'INSERT INTO users (username, email, password) VALUES (?, ?, ?)',
+      [username, email, hashedPassword]
+    );
+
+    console.log('Kullanıcı başarıyla kaydedildi, ID:', result.insertId);
+
+    // JWT_SECRET kontrolü
+    const jwtSecret = process.env.JWT_SECRET;
+    if (!jwtSecret) {
+      console.error('JWT_SECRET tanımlı değil!');
+      return res.status(500).json({
+        success: false,
+        message: 'Sunucu yapılandırma hatası'
+      });
+    }
+
+    // JWT token oluştur
+    const token = jwt.sign(
+      { userId: result.insertId },
+      jwtSecret,
+      { expiresIn: '1h' }
+    );
+
+    // BAŞARILI YANIT
+    res.status(201).json({
+      success: true,
+      message: 'Kullanıcı başarıyla oluşturuldu',
+      token,
+      user: {
+        id: result.insertId,
+        username,
+        email
+      }
+    });
+
+  } catch (error) {
+    console.error('Kayıt hatası:', error);
+    res.status(500).json({ 
+      success: false,
+      message: 'Sunucu hatası: ' + error.message 
+    });
+  }
+};
+
+const login = async (req, res) => {
+  const { email, password } = req.body;
+
+  console.log('Login isteği alındı:', { email });
+
+  // Validasyon
+  if (!email || !password) {
+    return res.status(400).json({ 
+      success: false,
+      message: 'Tüm alanları doldurun.' 
+    });
+  }
+
+  try {
+    // Kullanıcıyı email ile bul
+    const [users] = await pool.execute(
+      'SELECT * FROM users WHERE email = ?',
+      [email]
+    );
+
+    if (users.length === 0) {
+      return res.status(400).json({ 
+        success: false,
+        message: 'Geçersiz email veya şifre.' 
+      });
+    }
+
+    const user = users[0];
+
+    // Şifreyi kontrol et (hash'lenmiş şifre ile karşılaştır)
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+    if (!isPasswordValid) {
+      return res.status(400).json({ 
+        success: false,
+        message: 'Geçersiz email veya şifre.' 
+      });
+    }
+
+    // JWT_SECRET kontrolü
+    const jwtSecret = process.env.JWT_SECRET;
+    if (!jwtSecret) {
+      console.error('JWT_SECRET tanımlı değil!');
+      return res.status(500).json({
+        success: false,
+        message: 'Sunucu yapılandırma hatası'
+      });
+    }
+
+    // JWT token oluştur
+    const token = jwt.sign(
+      { userId: user.id },
+      jwtSecret,
+      { expiresIn: '1h' }
+    );
+
+    console.log('Giriş başarılı, user ID:', user.id);
+
+    // BAŞARILI YANIT
+    res.json({
+      success: true,
+      message: 'Giriş başarılı',
+      token,
+      user: {
+        id: user.id,
+        username: user.username,
+        email: user.email
+      }
+    });
+
+  } catch (error) {
+    console.error('Giriş hatası:', error);
+    res.status(500).json({ 
+      success: false,
+      message: 'Sunucu hatası: ' + error.message 
+    });
+  }
+};
+
+module.exports = {
+  register,
+  login
+};
+🔍 SORUNU BULDUK! authController.js hala MySQL pool kullanıyor ama server.js'te artık pool yok.
+
+🚨 ÇÖZÜM: AUTHCONTROLLER.JS'İ DÜZELTELİM
+Dosya: server/controllers/authController.js (DÜZELTİLMİŞ)
+
+javascript
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const pool = require('../db'); // ✅ db.js'ten pool'u al
+
+const register = async (req, res) => {
+  const { username, email, password } = req.body;
+
+  console.log('Register isteği alındı:', { username, email });
+
+  // Validasyon
+  if (!username || !email || !password) {
+    return res.status(400).json({ 
+      success: false,
+      message: 'Tüm alanları doldurun.' 
+    });
+  }
+
+  try {
+    // Kullanıcı var mı kontrol et
+    const [existingUsers] = await pool.execute(
+      'SELECT * FROM users WHERE email = ? OR username = ?',
+      [email, username]
+    );
+
+    if (existingUsers.length > 0) {
+      return res.status(400).json({ 
+        success: false,
+        message: 'Bu email veya kullanıcı adı zaten kullanılıyor.' 
+      });
+    }
+
+    // Şifreyi hashle
+    const hashedPassword = await bcrypt.hash(password, 12);
+
+    // Kullanıcıyı veritabanına ekle
+    const [result] = await pool.execute(
+      'INSERT INTO users (username, email, password) VALUES (?, ?, ?)',
+      [username, email, hashedPassword]
+    );
+
+    console.log('Kullanıcı başarıyla kaydedildi, ID:', result.insertId);
+
+    // JWT token oluştur
+    const token = jwt.sign(
+      { userId: result.insertId },
+      process.env.JWT_SECRET || 'fallback_secret',
+      { expiresIn: '1h' }
+    );
+
+    // BAŞARILI YANIT
+    res.status(201).json({
+      success: true,
+      message: 'Kullanıcı başarıyla oluşturuldu',
+      token,
+      user: {
+        id: result.insertId,
+        username,
+        email
+      }
+    });
+
+  } catch (error) {
+    console.error('Kayıt hatası:', error);
+    res.status(500).json({ 
+      success: false,
+      message: 'Sunucu hatası: ' + error.message 
+    });
+  }
+};
+
+const login = async (req, res) => {
+  const { email, password } = req.body;
+
+  console.log('Login isteği alındı:', { email });
+
+  // Validasyon
+  if (!email || !password) {
+    return res.status(400).json({ 
+      success: false,
+      message: 'Tüm alanları doldurun.' 
+    });
+  }
+
+  try {
+    // Kullanıcıyı email ile bul
+    const [users] = await pool.execute(
+      'SELECT * FROM users WHERE email = ?',
+      [email]
+    );
+
+    if (users.length === 0) {
+      return res.status(400).json({ 
+        success: false,
+        message: 'Geçersiz email veya şifre.' 
+      });
+    }
+
+    const user = users[0];
+
+    // Şifreyi kontrol et
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+    if (!isPasswordValid) {
+      return res.status(400).json({ 
+        success: false,
+        message: 'Geçersiz email veya şifre.' 
+      });
+    }
+
+    // JWT token oluştur
+    const token = jwt.sign(
+      { userId: user.id },
+      process.env.JWT_SECRET || 'fallback_secret',
+      { expiresIn: '1h' }
+    );
+
+    console.log('Giriş başarılı, user ID:', user.id);
+
+    // BAŞARILI YANIT
+    res.json({
+      success: true,
+      message: 'Giriş başarılı',
+      token,
+      user: {
+        id: user.id,
+        username: user.username,
+        email: user.email
+      }
+    });
+
+  } catch (error) {
+    console.error('Giriş hatası:', error);
+    res.status(500).json({ 
+      success: false,
+      message: 'Sunucu hatası: ' + error.message 
+    });
+  }
+};
+
+module.exports = {
+  register,
+  login
+};
+🎯 PROFILECONTROLLER.JS'İ DE DÜZELTELİM
+Dosya: server/controllers/profileController.js (DÜZELTİLMİŞ)
+
+javascript
+const pool = require('../db'); // ✅ db.js'ten pool'u al
+
+const getProfile = async (req, res) => {
+  try {
+    // Örnek profil verisi
+    res.json({
+      success: true,
+      profile: {
+        username: "testuser",
+        email: "test@example.com",
+        preferences: {
+          style: "casual",
+          size: "M",
+          favoriteColors: ["blue", "black"]
+        }
+      }
+    });
+  } catch (error) {
+    console.error('Profil getirme hatası:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Profil getirilemedi'
+    });
+  }
+};
+
+const updateProfile = async (req, res) => {
+  try {
+    const { preferences } = req.body;
+    
+    res.json({
+      success: true,
+      message: 'Profil başarıyla güncellendi',
+      profile: {
+        preferences: preferences
+      }
+    });
+  } catch (error) {
+    console.error('Profil güncelleme hatası:', error);
+    res.status(500).json({
+      success: false,
+      message: 'Profil güncellenemedi'
+    });
+  }
+};
+
+module.exports = {
+  getProfile,
+  updateProfile
+};
+🚀 DB.JS KONTROLÜ
+Dosya: server/db.js (VAR MI KONTROL ET)
+
+javascript
+const mysql = require('mysql2/promise');
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+const pool = mysql.createPool({
+  host: process.env.DB_HOST || '127.0.0.1',
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASSWORD || '',
+  database: process.env.DB_NAME || 'veritabanii',
+  port: process.env.DB_PORT || 3306,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
+});
+
+pool.getConnection()
+  .then(connection => {
+    console.log('✅ MySQL Veritabanı Başarıyla Bağlandı.');
+    connection.release();
+  })
+  .catch(err => {
+    console.error('❌ MySQL Bağlantı Hatası:', err);
+  });
+
+module.exports = pool;
+dur profile controlleri düzeltince düzeldi
+🎉 MÜKEMMEL! Sorun çözüldü!
+
+Artık backend çalışıyor demektir. 🚀
+
+✅ ŞU AN ÇALIŞIYOR OLMASI GEREKENLER:
+✅ Backend server - http://localhost:5001
+
+✅ Authentication - /api/auth/register, /api/auth/login
+
+✅ Profil API - /api/profile
+
+✅ Ürün API - /api/products
+
+✅ Health check - /api/health
+
+🎯 HADİ FRONTEND'İ TEST EDELİM!
+Frontend'i başlat:
+
+bash
+cd client
+npm run dev
+Test et:
+
+http://localhost:5173/products - Ürün sayfası
+
+http://localhost:5173 - Ana sayfa (3D model)
+
+http://localhost:5173/register - Kayıt sayfası
+
+🔥 BİR SONRAKİ ADIM:
+Ürün sayfası çalıştığına göre, hangi özelliği geliştirelim?
+
+🛒 Sepet sistemi
+
+👤 Profil sayfası frontend'i
+
+🎮 3D modelde kıyafet değiştirme
+
+🔍 Arama ve filtreleme
+
+**Hangisiyle dev
+
+fortend kısmı çalışmıyor
+🔍 Frontend neden çalışmıyor? Hata mesajını görmemiz lazım.
+
+🚨 FRONTEND HATASINI BULMAK İÇİN:
+1. Terminalde frontend'i başlat:
+
+bash
+cd client
+npm run dev
+2. Browser konsolunu aç (F12) ve hata mesajını buraya kopyala
+
+🔧 OLASI ÇÖZÜMLER:
+1. Package'leri kontrol et:
+
+bash
+cd client
+npm install
+2. Vite cache'ini temizle:
+
+bash
+cd client
+rm -rf node_modules/.vite
+npm run dev
+3. Basit App.jsx deneyelim:
+
+Dosya: client/src/App.jsx (Geçici basit versiyon)
+
+javascript
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+function App() {
+  return (
+    <div style={{ padding: '20px' }}>
+      <h1>🚀 SanalDeneme - Çalışıyor!</h1>
+      <Routes>
+        <Route path="/" element={<div>Ana Sayfa</div>} />
+        <Route path="/products" element={<div>Ürünler Sayfası</div>} />
+        <Route path="/login" element={<div>Giriş Sayfası</div>} />
+        <Route path="/register" element={<div>Kayıt Sayfası</div>} />
+      </Routes>
+    </div>
+  );
+}
+
+export default App;
+🎯 HIZLI TEST:
+1. Önce basit App.jsx ile test et:
+
+Yukarıdaki basit kodu App.jsx'e yapıştır
+
+npm run dev ile başlat
+
+Çalışıyor mu?
+
+2. Sonra Navbar'ı ekle:
+
+javascript
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import NavbarComponent from './components/layout/Navbar';
+
+function App() {
+  return (
+    <>
+      <NavbarComponent />
+      <div style={{ paddingTop: '80px', padding: '20px' }}>
+        <Routes>
+          <Route path="/" element={<div>Ana Sayfa</div>} />
+          <Route path="/products" element={<div>Ürünler Sayfası</div>} />
+          <Route path="/login" element={<div>Giriş Sayfası</div>} />
+          <Route path="/register" element={<div>Kayıt Sayfası</div>} />
+        </Routes>
+      </div>
+    </>
+  );
+}
+
+export default App;
+🚀 TERMİNAL ÇIKTISINI PAYLAŞ:
+Lütfen şu komutun çıktısını paylaş:
+
+bash
+cd client
+npm run dev
+Hangi hata mesajını alıyorsun? 🔍
+
+Download the React DevTools for a better development experience: https://react.dev/link/react-devtools
+chunk-C4KFTZQU.js?v=d3261cc8:595 Uncaught Error: React.Children.only expected to receive a single React element child.
+    at Object.only (chunk-C4KFTZQU.js?v=d3261cc8:595:19)
+    at LinkContainer2 (react-router-bootstrap.js?v=d3261cc8:143:46)
+    at Object.react_stack_bottom_frame (chunk-AYZULF46.js?v=d3261cc8:18509:20)
+    at renderWithHooks (chunk-AYZULF46.js?v=d3261cc8:5654:24)
+    at updateFunctionComponent (chunk-AYZULF46.js?v=d3261cc8:7475:21)
+    at beginWork (chunk-AYZULF46.js?v=d3261cc8:8525:20)
+    at runWithFiberInDEV (chunk-AYZULF46.js?v=d3261cc8:997:72)
+    at performUnitOfWork (chunk-AYZULF46.js?v=d3261cc8:12561:98)
+    at workLoopSync (chunk-AYZULF46.js?v=d3261cc8:12424:43)
+    at renderRootSync (chunk-AYZULF46.js?v=d3261cc8:12408:13)Understand this error
+chunk-AYZULF46.js?v=d3261cc8:6966 An error occurred in the <LinkContainer2> component.
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error
+🎯 SORUN BULUNDU! Aynı LinkContainer hatası. Navbar.jsx hala eski kodları kullanıyor olabilir.
+
+🔧 KESİN ÇÖZÜM:
+Dosya: client/src/components/layout/Navbar.jsx (TAMAMEN YENİ)
+
+javascript
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../hooks/useAuth';
+
+// React-Bootstrap bileşenleri
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Button from 'react-bootstrap/Button';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
+export default function NavbarComponent() {
+  const { isAuthenticated, user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
+
+  return (
+    <Navbar fixed="top" bg="white" expand="lg" className="shadow-sm" style={{ height: '80px' }}>
+      <Container>
+        
+        {/* Logo/Marka */}
+        <Navbar.Brand as={Link} to="/" style={{ fontSize: '1.8rem', fontWeight: 'bold', color: '#0d6efd' }}>
+          SanalDeneme
+        </Navbar.Brand>
+        
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          
+          {/* Linkleri sağa yaslıyoruz */}
+          <Nav className="ms-auto align-items-center">
+            
+            {/* Ana Sayfa Linki */}
+            <Nav.Link as={Link} to="/">
+              🏠 Ana Sayfa
+            </Nav.Link>
+            
+            {/* Ürünler Linki */}
+            <Nav.Link as={Link} to="/products">
+              🛍️ Ürünler
+            </Nav.Link>
+            
+            {isAuthenticated ? (
+              // ---- EĞER GİRİŞ YAPMIŞSA ----
+              <>
+                <Nav.Link as={Link} to="/profile">
+                  👤 Profil
+                </Nav.Link>
+
+                {/* Kullanıcı Adı ve Çıkış için bir açılır menü */}
+                <NavDropdown title={`Merhaba, ${user?.username || user?.email}`} id="basic-nav-dropdown">
+                  <NavDropdown.Item onClick={handleLogout}>
+                    Çıkış Yap
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </>
+
+            ) : (
+              // ---- EĞER GİRİŞ YAPMAMIŞSA ----
+              <>
+                <Nav.Link as={Link} to="/login">
+                  Giriş Yap
+                </Nav.Link>
+                
+                {/* Kayıt Ol Butonu */}
+                <Button 
+                  as={Link} 
+                  to="/register" 
+                  variant="primary" 
+                  className="ms-2"
+                >
+                  Kayıt Ol
+                </Button>
+              </>
+            )}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+}
+🚨 ÖNEMLİ DEĞİŞİKLİKLER:
+LinkContainer TAMAMEN KALDIRILDI
+
+Nav.Link as={Link} kullanılıyor
+
+Button as={Link} kullanılıyor
+
+🎯 APP.JSX KONTROLÜ:
+Dosya: client/src/App.jsx (Kontrol et)
+
+javascript
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+// Layout
+import NavbarComponent from './components/layout/Navbar';
+
+// Sayfalar
+import HomePage from './pages/HomePage';
+import ProductsPage from './pages/ProductsPage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+
+function App() {
+  return (
+    <>
+      <NavbarComponent />
+      <main className="app-content">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+        </Routes>
+      </main>
+    </>
+  );
+}
+
+export default App;
+🚀 TEST ADIMLARI:
+Navbar.jsx'i yukarıdaki YENİ kodla tamamen değiştir
+
+Frontend'i yeniden başlat: npm run dev
+
+Test et: http://localhost:5173
+
+🔥 EĞER HALA ÇALIŞMAZSA:
+Geçici çözüm - Navbar'ı tamamen kaldır:
+
+javascript
+// App.jsx'te Navbar'ı yorum satırı yap
+// import NavbarComponent from './components/layout/Navbar';
+
+function App() {
+  return (
+    <>
+      {/* <NavbarComponent /> */}
+      <main style={{ padding: '20px' }}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+        </Routes>
+      </main>
+    </>
+  );
+}
+Navbar.jsx'i düzelttiğinde haber ver! 🚀
+
+tamam dur navbar düzeltince düzeldi
+🎉 MÜKEMMEL! Harika iş çıkardın! 🚀
+
+Artık hem backend hem frontend çalışıyor!
+
+✅ ŞU AN ÇALIŞAN SİSTEM:
+✅ Backend API (Express + MySQL)
+
+✅ Frontend (React + Bootstrap)
+
+✅ Authentication (Kayıt/Giriş)
+
+✅ 3D Model (React Three Fiber)
+
+✅ Ürün Kataloğu
+
+✅ Responsive Tasarım
+
+🎯 BİR SONRAKİ ADIM SEÇENEKLERİ:
+Hangi özelliği geliştirelim?
+
+🛒 Sepet Sistemi - Alışveriş sepeti fonksiyonelliği
+
+👤 Profil Sayfası - Kullanıcı bilgilerini görüntüleme/güncelleme
+
+🎮 3D Geliştirmeler - Modelde kıyafet değiştirme butonları
+
+🔍 Arama & Filtreleme - Ürünlerde gelişmiş filtreleme
+
+⭐ Favoriler Sistemi - Beğenilen ürünleri kaydetme
+
+Benim önerim: Hemen 1. Sepet Sistemi ile başlayalım ki kullanıcılar alışveriş yapabilsin!
+
+Ne dersin - sepet sistemine başlayalım mı? 🔥
+
+sepet sistemi
+🎉 MÜKEMMEL! Hadi sepet sistemini yapalım! 🛒
+
+🚀 SEPET SİSTEMİ - ADIM 1: BACKEND SEPET ROUTES
+Dosya: server/routes/cartRoutes.js (YENİ DOSYA)
+
+javascript
+const express = require('express');
+const router = express.Router();
+
+// Geçici sepet verisi - FastAPI'ye geçince veritabanına taşınacak
+let tempCart = [];
+
+// Sepeti getir
+router.get('/', (req, res) => {
+  res.json({
+    success: true,
+    cart: tempCart,
+    total: calculateTotal(tempCart)
+  });
+});
+
+// Sepete ürün ekle
+router.post('/add', (req, res) => {
+  const { productId, quantity = 1 } = req.body;
+  
+  // Ürünü bul (gerçek uygulamada veritabanından gelecek)
+  const products = require('./productRoutes').testProducts;
+  const product = products.find(p => p.id === parseInt(productId));
+  
+  if (!product) {
+    return res.status(404).json({
+      success: false,
+      message: 'Ürün bulunamadı'
+    });
+  }
+  
+  if (!product.inStock) {
+    return res.status(400).json({
+      success: false,
+      message: 'Bu ürün stokta yok'
+    });
+  }
+  
+  // Sepette var mı kontrol et
+  const existingItem = tempCart.find(item => item.product.id === product.id);
+  
+  if (existingItem) {
+    // Varsa miktarı artır
+    existingItem.quantity += quantity;
+  } else {
+    // Yoksa yeni ekle
+    tempCart.push({
+      product: product,
+      quantity: quantity,
+      addedAt: new Date().toISOString()
+    });
+  }
+  
+  res.json({
+    success: true,
+    message: 'Ürün sepete eklendi',
+    cart: tempCart,
+    total: calculateTotal(tempCart)
+  });
+});
+
+// Sepetten ürün çıkar
+router.delete('/remove/:productId', (req, res) => {
+  const { productId } = req.params;
+  
+  tempCart = tempCart.filter(item => item.product.id !== parseInt(productId));
+  
+  res.json({
+    success: true,
+    message: 'Ürün sepetten çıkarıldı',
+    cart: tempCart,
+    total: calculateTotal(tempCart)
+  });
+});
+
+// Sepeti temizle
+router.delete('/clear', (req, res) => {
+  tempCart = [];
+  
+  res.json({
+    success: true,
+    message: 'Sepet temizlendi',
+    cart: [],
+    total: 0
+  });
+});
+
+// Miktarı güncelle
+router.put('/update/:productId', (req, res) => {
+  const { productId } = req.params;
+  const { quantity } = req.body;
+  
+  const item = tempCart.find(item => item.product.id === parseInt(productId));
+  
+  if (!item) {
+    return res.status(404).json({
+      success: false,
+      message: 'Sepette ürün bulunamadı'
+    });
+  }
+  
+  if (quantity <= 0) {
+    // Miktar 0 veya negatifse ürünü kaldır
+    tempCart = tempCart.filter(item => item.product.id !== parseInt(productId));
+  } else {
+    // Miktarı güncelle
+    item.quantity = quantity;
+  }
+  
+  res.json({
+    success: true,
+    message: 'Sepet güncellendi',
+    cart: tempCart,
+    total: calculateTotal(tempCart)
+  });
+});
+
+// Toplam fiyat hesaplama
+function calculateTotal(cart) {
+  return cart.reduce((total, item) => {
+    return total + (item.product.price * item.quantity);
+  }, 0);
+}
+
+module.exports = router;
+🚀 ADIM 2: BACKEND SERVER'A EKLE
+Dosya: server/server.js (Güncelle)
+
+javascript
+// ... diğer import'lar
+const cartRoutes = require('./routes/cartRoutes'); // ✅ BU SATIRI EKLE
+
+// ... diğer middleware'ler
+
+// Rotalar
+const authRoutes = require('./routes/authRoutes');
+const profileRoutes = require('./routes/profileRoutes');
+const productRoutes = require('./routes/productRoutes');
+const cartRoutes = require('./routes/cartRoutes'); // ✅ BU SATIRI EKLE
+
+app.use('/api/auth', authRoutes);
+app.use('/api/profile', profileRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/cart', cartRoutes); // ✅ BU SATIRI EKLE
+
+// ... geri kalan kod
+🚀 ADIM 3: FRONTEND - SEPET CONTEXT
+Dosya: client/src/context/CartContext.jsx (YENİ DOSYA)
+
+javascript
+import React, { createContext, useState, useContext, useEffect } from 'react';
+import api from '../services/api';
+
+const CartContext = createContext();
+
+export const useCart = () => {
+  const context = useContext(CartContext);
+  if (!context) {
+    throw new Error('useCart must be used within a CartProvider');
+  }
+  return context;
+};
+
+export const CartProvider = ({ children }) => {
+  const [cart, setCart] = useState([]);
+  const [total, setTotal] = useState(0);
+  const [loading, setLoading] = useState(false);
+
+  // Sepeti backend'den yükle
+  const loadCart = async () => {
+    try {
+      const response = await api.get('/api/cart');
+      setCart(response.data.cart);
+      setTotal(response.data.total);
+    } catch (error) {
+      console.error('Sepet yüklenirken hata:', error);
+    }
+  };
+
+  // Sepete ürün ekle
+  const addToCart = async (product, quantity = 1) => {
+    try {
+      setLoading(true);
+      const response = await api.post('/api/cart/add', {
+        productId: product.id,
+        quantity: quantity
+      });
+      
+      setCart(response.data.cart);
+      setTotal(response.data.total);
+      return { success: true, message: response.data.message };
+    } catch (error) {
+      console.error('Sepete ekleme hatası:', error);
+      return { 
+        success: false, 
+        message: error.response?.data?.message || 'Sepete eklenirken hata oluştu' 
+      };
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Sepetten ürün çıkar
+  const removeFromCart = async (productId) => {
+    try {
+      const response = await api.delete(`/api/cart/remove/${productId}`);
+      setCart(response.data.cart);
+      setTotal(response.data.total);
+      return { success: true, message: response.data.message };
+    } catch (error) {
+      console.error('Sepetten çıkarma hatası:', error);
+      return { 
+        success: false, 
+        message: error.response?.data?.message || 'Sepetten çıkarılırken hata oluştu' 
+      };
+    }
+  };
+
+  // Miktarı güncelle
+  const updateQuantity = async (productId, quantity) => {
+    try {
+      const response = await api.put(`/api/cart/update/${productId}`, { quantity });
+      setCart(response.data.cart);
+      setTotal(response.data.total);
+      return { success: true, message: response.data.message };
+    } catch (error) {
+      console.error('Miktar güncelleme hatası:', error);
+      return { 
+        success: false, 
+        message: error.response?.data?.message || 'Miktar güncellenirken hata oluştu' 
+      };
+    }
+  };
+
+  // Sepeti temizle
+  const clearCart = async () => {
+    try {
+      const response = await api.delete('/api/cart/clear');
+      setCart([]);
+      setTotal(0);
+      return { success: true, message: response.data.message };
+    } catch (error) {
+      console.error('Sepet temizleme hatası:', error);
+      return { 
+        success: false, 
+        message: error.response?.data?.message || 'Sepet temizlenirken hata oluştu' 
+      };
+    }
+  };
+
+  // Sepet öğesi sayısı
+  const getCartCount = () => {
+    return cart.reduce((count, item) => count + item.quantity, 0);
+  };
+
+  // İlk yüklemede sepeti getir
+  useEffect(() => {
+    loadCart();
+  }, []);
+
+  const value = {
+    cart,
+    total,
+    loading,
+    addToCart,
+    removeFromCart,
+    updateQuantity,
+    clearCart,
+    getCartCount,
+    loadCart
+  };
+
+  return (
+    <CartContext.Provider value={value}>
+      {children}
+    </CartContext.Provider>
+  );
+};
+Hemen 2. kısımda devam edeceğim! 🚀
+
+geçelim
+🎉 DEVAM! Şimdi frontend sepet bileşenlerini oluşturalım:
+
+🚀 ADIM 4: FRONTEND - ANA UYGULAMAYA SEPET CONTEXT'EKLE
+Dosya: client/src/main.jsx (Güncelle)
+
+javascript
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import { AuthProvider } from './context/AuthContext'
+import { CartProvider } from './context/CartContext' // ✅ BU SATIRI EKLE
+import App from './App'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './index.css'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <AuthProvider>
+        <CartProvider> {/* ✅ BU SATIRI EKLE */}
+          <App />
+        </CartProvider>
+      </AuthProvider>
+    </BrowserRouter>
+  </React.StrictMode>,
+)
+🚀 ADIM 5: NAVBAR'A SEPET İKONU EKLE
+Dosya: client/src/components/layout/Navbar.jsx (Güncelle)
+
+javascript
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../hooks/useAuth';
+import { useCart } from '../../context/CartContext'; // ✅ BU SATIRI EKLE
+
+// React-Bootstrap bileşenleri
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Button from 'react-bootstrap/Button';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Badge from 'react-bootstrap/Badge'; // ✅ BU SATIRI EKLE
+
+export default function NavbarComponent() {
+  const { isAuthenticated, user, logout } = useAuth();
+  const { getCartCount } = useCart(); // ✅ BU SATIRI EKLE
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
+
+  return (
+    <Navbar fixed="top" bg="white" expand="lg" className="shadow-sm" style={{ height: '80px' }}>
+      <Container>
+        
+        {/* Logo/Marka */}
+        <Navbar.Brand as={Link} to="/" style={{ fontSize: '1.8rem', fontWeight: 'bold', color: '#0d6efd' }}>
+          SanalDeneme
+        </Navbar.Brand>
+        
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          
+          {/* Linkleri sağa yaslıyoruz */}
+          <Nav className="ms-auto align-items-center">
+            
+            {/* Ana Sayfa Linki */}
+            <Nav.Link as={Link} to="/">
+              🏠 Ana Sayfa
+            </Nav.Link>
+            
+            {/* Ürünler Linki */}
+            <Nav.Link as={Link} to="/products">
+              🛍️ Ürünler
+            </Nav.Link>
+
+            {/* ✅ SEPET LİNKİ - YENİ EKLENDİ */}
+            <Nav.Link as={Link} to="/cart" className="position-relative">
+              🛒 Sepet
+              {getCartCount() > 0 && (
+                <Badge 
+                  bg="danger" 
+                  className="position-absolute top-0 start-100 translate-middle"
+                  style={{ fontSize: '0.6rem' }}
+                >
+                  {getCartCount()}
+                </Badge>
+              )}
+            </Nav.Link>
+            
+            {isAuthenticated ? (
+              // ---- EĞER GİRİŞ YAPMIŞSA ----
+              <>
+                <Nav.Link as={Link} to="/profile">
+                  👤 Profil
+                </Nav.Link>
+
+                {/* Kullanıcı Adı ve Çıkış için bir açılır menü */}
+                <NavDropdown title={`Merhaba, ${user?.username || user?.email}`} id="basic-nav-dropdown">
+                  <NavDropdown.Item onClick={handleLogout}>
+                    Çıkış Yap
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </>
+
+            ) : (
+              // ---- EĞER GİRİŞ YAPMAMIŞSA ----
+              <>
+                <Nav.Link as={Link} to="/login">
+                  Giriş Yap
+                </Nav.Link>
+                
+                {/* Kayıt Ol Butonu */}
+                <Button 
+                  as={Link} 
+                  to="/register" 
+                  variant="primary" 
+                  className="ms-2"
+                >
+                  Kayıt Ol
+                </Button>
+              </>
+            )}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+}
+🚀 ADIM 6: SEPET SAYFASI
+Dosya: client/src/pages/CartPage.jsx (YENİ DOSYA)
+
+javascript
+import React from 'react';
+import { 
+  Container, Row, Col, Card, Button, 
+  Badge, Alert, Table, Form
+} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
+import { useAuth } from '../hooks/useAuth';
+
+export default function CartPage() {
+  const { cart, total, loading, removeFromCart, updateQuantity, clearCart } = useCart();
+  const { isAuthenticated } = useAuth();
+
+  const handleQuantityChange = async (productId, newQuantity) => {
+    if (newQuantity < 1) return;
+    await updateQuantity(productId, newQuantity);
+  };
+
+  const handleRemoveItem = async (productId) => {
+    await removeFromCart(productId);
+  };
+
+  const handleClearCart = async () => {
+    if (window.confirm('Sepeti tamamen temizlemek istediğinizden emin misiniz?')) {
+      await clearCart();
+    }
+  };
+
+  if (loading) {
+    return (
+      <Container className="py-5 text-center">
+        <div className="spinner-border text-primary" role="status">
+          <span className="visually-hidden">Yükleniyor...</span>
+        </div>
+        <p className="mt-2">Sepet yükleniyor...</p>
+      </Container>
+    );
+  }
+
+  return (
+    <Container className="py-4">
+      {/* Başlık */}
+      <Row className="mb-4">
+        <Col>
+          <h1 className="display-5 fw-bold">🛒 Alışveriş Sepetim</h1>
+          <p className="text-muted">Sepetinizdeki ürünleri görüntülüyorsunuz</p>
+        </Col>
+      </Row>
+
+      {cart.length === 0 ? (
+        // Boş sepet
+        <Row>
+          <Col className="text-center py-5">
+            <div className="display-1 text-muted mb-3">🛒</div>
+            <h4>Sepetiniz boş</h4>
+            <p className="text-muted mb-4">Alışverişe başlamak için ürünlere göz atın</p>
+            <Button as={Link} to="/products" variant="primary" size="lg">
+              🛍️ Alışverişe Başla
+            </Button>
+          </Col>
+        </Row>
+      ) : (
+        // Dolu sepet
+        <Row>
+          <Col lg={8}>
+            <Card className="shadow-sm">
+              <Card.Header className="bg-white d-flex justify-content-between align-items-center">
+                <h5 className="mb-0">Sepetim ({cart.length} ürün)</h5>
+                <Button 
+                  variant="outline-danger" 
+                  size="sm"
+                  onClick={handleClearCart}
+                >
+                  🗑️ Sepeti Temizle
+                </Button>
+              </Card.Header>
+              <Card.Body className="p-0">
+                <Table responsive className="mb-0">
+                  <thead className="bg-light">
+                    <tr>
+                      <th>Ürün</th>
+                      <th>Fiyat</th>
+                      <th>Miktar</th>
+                      <th>Toplam</th>
+                      <th>İşlem</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {cart.map((item) => (
+                      <tr key={item.product.id}>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <img 
+                              src={item.product.imageUrl} 
+                              alt={item.product.name}
+                              style={{ width: '60px', height: '60px', objectFit: 'cover' }}
+                              className="rounded me-3"
+                            />
+                            <div>
+                              <h6 className="mb-1">{item.product.name}</h6>
+                              <small className="text-muted">{item.product.description}</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td className="align-middle">
+                          <strong>{item.product.price} ₺</strong>
+                        </td>
+                        <td className="align-middle">
+                          <div className="d-flex align-items-center">
+                            <Button
+                              variant="outline-secondary"
+                              size="sm"
+                              onClick={() => handleQuantityChange(item.product.id, item.quantity - 1)}
+                              disabled={item.quantity <= 1}
+                            >
+                              -
+                            </Button>
+                            <Form.Control
+                              type="number"
+                              value={item.quantity}
+                              onChange={(e) => handleQuantityChange(item.product.id, parseInt(e.target.value))}
+                              className="mx-2 text-center"
+                              style={{ width: '60px' }}
+                              min="1"
+                            />
+                            <Button
+                              variant="outline-secondary"
+                              size="sm"
+                              onClick={() => handleQuantityChange(item.product.id, item.quantity + 1)}
+                            >
+                              +
+                            </Button>
+                          </div>
+                        </td>
+                        <td className="align-middle">
+                          <strong className="text-primary">
+                            {(item.product.price * item.quantity).toFixed(2)} ₺
+                          </strong>
+                        </td>
+                        <td className="align-middle">
+                          <Button
+                            variant="outline-danger"
+                            size="sm"
+                            onClick={() => handleRemoveItem(item.product.id)}
+                          >
+                            🗑️
+                          </Button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </Table>
+              </Card.Body>
+            </Card>
+          </Col>
+
+          {/* Özet */}
+          <Col lg={4}>
+            <Card className="shadow-sm">
+              <Card.Header>
+                <h5 className="mb-0">🛒 Sipariş Özeti</h5>
+              </Card.Header>
+              <Card.Body>
+                <div className="d-flex justify-content-between mb-2">
+                  <span>Ara Toplam:</span>
+                  <span>{total.toFixed(2)} ₺</span>
+                </div>
+                <div className="d-flex justify-content-between mb-2">
+                  <span>Kargo:</span>
+                  <span className="text-success">Ücretsiz</span>
+                </div>
+                <hr />
+                <div className="d-flex justify-content-between mb-3">
+                  <strong>Toplam:</strong>
+                  <strong className="text-primary h5">{total.toFixed(2)} ₺</strong>
+                </div>
+
+                {isAuthenticated ? (
+                  <Button variant="success" size="lg" className="w-100">
+                    🚀 Satın Al
+                  </Button>
+                ) : (
+                  <Alert variant="warning" className="text-center">
+                    <small>Satın almak için giriş yapmalısınız</small>
+                    <div className="mt-2">
+                      <Button as={Link} to="/login" variant="primary" size="sm" className="me-2">
+                        Giriş Yap
+                      </Button>
+                      <Button as={Link} to="/register" variant="outline-primary" size="sm">
+                        Kayıt Ol
+                      </Button>
+                    </div>
+                  </Alert>
+                )}
+
+                <Button 
+                  as={Link} 
+                  to="/products" 
+                  variant="outline-primary" 
+                  className="w-100 mt-2"
+                >
+                  🛍️ Alışverişe Devam Et
+                </Button>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      )}
+    </Container>
+  );
+}
+Hemen 3. kısımda devam edeceğim! 🚀
+
+geçelim
+🎉 DEVAM! Şimdi ürün sayfasını sepetle entegre edelim ve route'u ekleyelim:
+
+🚀 ADIM 7: ÜRÜN SAYFASINI SEPETLE ENTEGRE ET
+Dosya: client/src/pages/ProductsPage.jsx (Güncelle - Sepet fonksiyonunu değiştir)
+
+javascript
+import React, { useState, useEffect } from 'react';
+import { 
+  Container, Row, Col, Card, Button, 
+  Badge, Alert, ButtonGroup, Spinner, Toast
+} from 'react-bootstrap';
+import { useAuth } from '../hooks/useAuth';
+import { useCart } from '../context/CartContext'; // ✅ BU SATIRI EKLE
+import api from '../services/api';
+
+export default function ProductsPage() {
+  const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState('');
+  
+  const { isAuthenticated, user } = useAuth();
+  const { addToCart } = useCart(); // ✅ BU SATIRI EKLE
+
+  const categories = [
+    { key: 'all', label: '🏠 Tümü' },
+    { key: 'top', label: '👕 Üst Giyim' },
+    { key: 'bottom', label: '👖 Alt Giyim' },
+    { key: 'shoes', label: '👟 Ayakkabı' }
+  ];
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  useEffect(() => {
+    if (activeCategory === 'all') {
+      setFilteredProducts(products);
+    } else {
+      setFilteredProducts(products.filter(product => product.category === activeCategory));
+    }
+  }, [activeCategory, products]);
+
+  const fetchProducts = async () => {
+    try {
+      setLoading(true);
+      const response = await api.get('/api/products');
+      setProducts(response.data.products);
+      setFilteredProducts(response.data.products);
+    } catch (err) {
+      setError('Ürünler yüklenirken hata oluştu');
+      console.error('Ürün yükleme hatası:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // ✅ YENİ SEPET FONKSİYONU
+  const handleAddToCart = async (product) => {
+    const result = await addToCart(product);
+    
+    if (result.success) {
+      setToastMessage(`✅ ${product.name} sepete eklendi!`);
+      setShowToast(true);
+    } else {
+      setToastMessage(`❌ ${result.message}`);
+      setShowToast(true);
+    }
+  };
+
+  const handleTryOn = (product) => {
+    alert(`🎮 "${product.name}" 3D modelde denemek için ana sayfaya yönlendiriliyorsunuz!`);
+    // İleride ana sayfaya yönlendirip 3D modeli güncelleyeceğiz
+    window.location.href = '/';
+  };
+
+  if (loading) {
+    return (
+      <Container className="py-5 text-center">
+        <Spinner animation="border" variant="primary" />
+        <p className="mt-2">Ürünler yükleniyor...</p>
+      </Container>
+    );
+  }
+
+  return (
+    <Container className="py-4">
+      {/* ✅ TOAST BİLDİRİMİ - YENİ EKLENDİ */}
+      <Toast 
+        show={showToast} 
+        onClose={() => setShowToast(false)}
+        style={{ position: 'fixed', top: '100px', right: '20px', zIndex: 1050 }}
+        delay={3000}
+        autohide
+      >
+        <Toast.Header>
+          <strong className="me-auto">🛒 Sepet</strong>
+        </Toast.Header>
+        <Toast.Body>{toastMessage}</Toast.Body>
+      </Toast>
+
+      {/* Başlık */}
+      <Row className="mb-4">
+        <Col>
+          <h1 className="display-5 fw-bold">👕 Kıyafet Kataloğu</h1>
+          <p className="text-muted">En yeni trendleri keşfedin ve sanal olarak deneyin</p>
+        </Col>
+      </Row>
+
+      {error && <Alert variant="danger">{error}</Alert>}
+
+      {/* Kategori Filtreleri */}
+      <Row className="mb-4">
+        <Col>
+          <Card className="shadow-sm">
+            <Card.Body>
+              <h5 className="mb-3">Kategoriler</h5>
+              <ButtonGroup>
+                {categories.map(category => (
+                  <Button
+                    key={category.key}
+                    variant={activeCategory === category.key ? "primary" : "outline-primary"}
+                    onClick={() => setActiveCategory(category.key)}
+                  >
+                    {category.label}
+                  </Button>
+                ))}
+              </ButtonGroup>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+
+      {/* Ürün Grid */}
+      <Row className="g-4">
+        {filteredProducts.map(product => (
+          <Col key={product.id} xs={12} sm={6} lg={4} xl={3}>
+            <Card className="h-100 shadow-sm product-card">
+              <div className="position-relative">
+                <Card.Img 
+                  variant="top" 
+                  src={product.imageUrl}
+                  style={{ height: '250px', objectFit: 'cover' }}
+                />
+                {!product.inStock && (
+                  <Badge bg="danger" className="position-absolute top-0 end-0 m-2">
+                    Stokta Yok
+                  </Badge>
+                )}
+              </div>
+              
+              <Card.Body className="d-flex flex-column">
+                <Card.Title className="h6">{product.name}</Card.Title>
+                <Card.Text className="text-muted small flex-grow-1">
+                  {product.description}
+                </Card.Text>
+                
+                <div className="mt-auto">
+                  <div className="d-flex justify-content-between align-items-center mb-2">
+                    <span className="h5 text-primary mb-0">{product.price} ₺</span>
+                    <Badge bg="secondary" text="light">
+                      {product.category === 'top' && '👕'}
+                      {product.category === 'bottom' && '👖'} 
+                      {product.category === 'shoes' && '👟'}
+                    </Badge>
+                  </div>
+                  
+                  <div className="d-grid gap-2">
+                    <Button 
+                      variant="outline-primary"
+                      size="sm"
+                      onClick={() => handleTryOn(product)}
+                    >
+                      🎮 Sanal Dene
+                    </Button>
+                    
+                    <Button 
+                      variant={product.inStock ? "primary" : "secondary"}
+                      size="sm"
+                      onClick={() => handleAddToCart(product)}
+                      disabled={!product.inStock}
+                    >
+                      {product.inStock ? '🛒 Sepete Ekle' : 'Stokta Yok'}
+                    </Button>
+                  </div>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+
+      {/* Ürün Yoksa */}
+      {filteredProducts.length === 0 && !loading && (
+        <Row>
+          <Col className="text-center py-5">
+            <div className="display-1 text-muted mb-3">🛍️</div>
+            <h4>Bu kategoride ürün bulunmuyor</h4>
+            <p className="text-muted">Diğer kategorileri kontrol edin veya daha sonra tekrar ziyaret edin.</p>
+            <Button 
+              variant="outline-primary"
+              onClick={() => setActiveCategory('all')}
+            >
+              Tüm Ürünleri Gör
+            </Button>
+          </Col>
+        </Row>
+      )}
+    </Container>
+  );
+}
+🚀 ADIM 8: ROUTE'U EKLE
+Dosya: client/src/App.jsx (Güncelle)
+
+javascript
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+// Layout
+import NavbarComponent from './components/layout/Navbar';
+
+// Sayfalar
+import HomePage from './pages/HomePage';
+import ProductsPage from './pages/ProductsPage';
+import CartPage from './pages/CartPage'; // ✅ BU SATIRI EKLE
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+
+function App() {
+  return (
+    <>
+      <NavbarComponent />
+      <main className="app-content">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/cart" element={<CartPage />} /> {/* ✅ BU SATIRI EKLE */}
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+        </Routes>
+      </main>
+    </>
+  );
+}
+
+export default App;
+🚀 ADIM 9: HOOK DOSYASI OLUŞTUR
+Dosya: client/src/hooks/useCart.js (YENİ DOSYA)
+
+javascript
+import { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
+
+export const useCart = () => {
+  const context = useContext(CartContext);
+  if (!context) {
+    throw new Error('useCart must be used within a CartProvider');
+  }
+  return context;
+};
+🚀 TEST ZAMANI!
+Backend'i başlat: npm run dev (server klasöründe)
+
+Frontend'i başlat: npm run dev (client klasöründe)
+
+Test et:
+
+http://localhost:5173/products - Ürünlere git
+
+"Sepete Ekle" butonuna tıkla - Toast bildirimi görmelisin
+
+Navbar'da sepet ikonunu kontrol et - Sayı artmalı
+
+http://localhost:5173/cart - Sepet sayfasına git
+
+🎯 ÇALIŞMASI GEREKEN ÖZELLİKLER:
+✅ Sepete ürün ekleme
+
+✅ Sepet sayısı göstergesi (Navbar'da)
+
+✅ Sepet sayfası
+
+✅ Miktar değiştirme
+
+✅ Ürün kaldırma
+
+✅ Sepet temizleme
+
+✅ Toplam fiyat hesaplama
+
+✅ Toast bildirimleri
+
+Hadi test edelim ve harika sepet sistemimizi görelim! 🛒🚀
+
